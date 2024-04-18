@@ -1,0 +1,50 @@
+[
+    {
+        "nombre": "One Million",
+        "precio": "25.000",
+        "cantidad": "5",
+        "categoria": "halloween",
+        "genero": "masculino",
+        "tamaño": "30ml"
+    },
+    {
+        "nombre": "Invictus",
+        "precio": "35.000",
+        "cantidad": "5",
+        "categoria": "halloween",
+        "genero": "masculino",
+        "tamaño": "50ml"
+    },
+    {
+        "nombre": "asdjasdjad",
+        "precio": "50.000",
+        "cantidad": "5",
+        "categoria": "halloween",
+        "genero": "masculino",
+        "tamaño": "100ml"
+    },
+    {
+        "nombre": "sauvage",
+        "precio": "30.000",
+        "cantidad": "5",
+        "categoria": "navidad",
+        "genero": "masculino",
+        "tamaño": "100ml"
+    },
+    {
+        "nombre": "phantom",
+        "precio": "50.000",
+        "cantidad": "5",
+        "categoria": "navidad",
+        "genero": "masculino",
+        "tamaño": "100ml"
+    },
+    {
+        "nombre": "212 VIP",
+        "precio": "50.000",
+        "cantidad": "5",
+        "categoria": "halloween",
+        "genero": "masculino",
+        "tamaño": "100ml"
+    }
+]
