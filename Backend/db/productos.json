@@ -46,5 +46,21 @@
         "categoria": "halloween",
         "genero": "masculino",
         "tamaño": "100ml"
+    },
+    {
+        "nombre": "lacoste blanc",
+        "precio": "50.000",
+        "cantidad": "5",
+        "categoria": "halloween",
+        "genero": "masculino",
+        "tamaño": "100ml"
+    },
+    {
+        "nombre": "nuevo perfume",
+        "precio": "100.000",
+        "cantidad": "20",
+        "categoria": "navidad",
+        "genero": "masculino",
+        "tamaño": "120ml"
     }
 ]

@@ -5,6 +5,7 @@ import productController from './Backend/src/controllers/productController';
 import db from "./Backend/db/db"
 import multer from "multer"
 let dbProductos = new db("./Backend/db/productos.json")
+let dbUsuarios = new db("./Backend/db/usuarios.json")
 
 miImportacion()
 console.log("inicializando aplicacion");
@@ -30,7 +31,7 @@ const upload = multer({ storage: multer.diskStorage({
 // Configura Express para servir archivos estáticos desde la carpeta definida
 app.use(express.static(staticFolder));
 app.use(express.json()); // app.use(express.static('build'));
-productController(app,dbProductos)
+productController(app,dbProductos,dbUsuarios)
 
 
 

@@ -1,3 +1,5 @@
+//prueba de exportación de funcion global
+
 export default function miImportacion () :void{
     
     

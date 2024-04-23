@@ -1,4 +1,5 @@
 "use strict";
+//prueba de exportación de funcion global
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.buque = exports.avion = void 0;
 function miImportacion() {

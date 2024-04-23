@@ -10,10 +10,10 @@ class db {
         this.data = [];
         this.url = "";
         this.url = url;
-        this.data = JSON.parse(String(fs_1.default.readFileSync(this.url)));
+        this.data = JSON.parse(String(fs_1.default.readFileSync(this.url))); //PUNTO DEBIL
     }
     save() {
-        fs_1.default.writeFileSync(this.url, JSON.stringify(this.data));
+        fs_1.default.writeFileSync(this.url, JSON.stringify(this.data)); // PUNTO DEBIL
     }
     load() {
         this.data = JSON.parse(String(fs_1.default.readFileSync(this.url)));

@@ -5,10 +5,10 @@ export default class db{
     public url: string = ""
     constructor(url:string) {
         this.url=url
-        this.data = JSON.parse(String(fs.readFileSync(this.url)))
+        this.data = JSON.parse(String(fs.readFileSync(this.url)))    //PUNTO DEBIL
     }
     public save() :void{
-        fs.writeFileSync(this.url, JSON.stringify(this.data))
+        fs.writeFileSync(this.url, JSON.stringify(this.data))        // PUNTO DEBIL
     }
     public load() :void{
         this.data = JSON.parse(String(fs.readFileSync(this.url)))

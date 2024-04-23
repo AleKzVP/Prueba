@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIOVE</title>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+    <header>
+        <header>
+			
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="" style="color: #000000;"></i>
+                    <div class="content-customer-support">
+                        <span class="text"></span>
+                        <span class="number"></span>
+                    </div>
+                </div>
+
+                <div class="container-logo">
+                    
+                    <h1 class="logo"><a href="">G  I  O  V  E</a></h1>
+                </div>
+
+                <div class="container-user">
+                    <a href="usuario.html"><img src="img\usuario-del-portapapeles.png" class="icono1" ></a>
+                    <div class="content-shopping-cart">
+                        <a href="buscar.html"><img src="img\lupa.png" class="icono2"></a>
+                        <a href="carrito.html"><img src="img\bolsas-de-compras.png" class="icono3"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#Inspirados">Perfumería inspirada</a></li>
+                    <li><a href="#Premium">Premium 1.1</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    
+                </ul>
+
+                <form class="search-form">
+                        <button class="btn-search">
+                        <i class=""></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content"></main>
+    <section class="container top-categories">
+        <h1 class="heading-1">Mejores Categorías</h1>
+        <div class="container-categories">
+            <div class="card-category category-inspired">
+                <p>Inspired</p>
+                <span>Ver más</span>
+            </div>
+            <div class="card-category category-premium">
+                <p>Premium</p>
+                <span>Ver más</span>
+            </div>
+            <div class="card-category category-splash">
+                <p>Spash & creams</p>
+                <span>Ver más</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container top-products" id="Premium">
+        <h1 class="heading-1">Premium 1.1</h1>
+
+
+        <div class="container-products">
+            <!-- Producto 1 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/PHANTOM.jpeg" alt="PHANTOM MEN " onclick="addToCart('Producto 1', 10)" />
+                    <span class="discount">-13%</span>
+                    <div class="button-group">
+                        <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>                        
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>PHANTOM MEN 120ml</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping" onclick="addToCart('Producto 1', 10)"></i>
+                    </span>
+                    <p class="price">$104.900 <span>$120.000</span></p>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/BVLGARI MAN.jpeg "
+                        alt="BVLGARI MAN"
+                    />
+                    <span class="discount">-22%</span>
+                    <div class="button-group">
+                        <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>
+                       
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3> BVLGARI MAN  100ml</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </span>
+                    <p class="price">$129.900 <span>$170.000</span></p>
+                </div>
+            </div>
+            <!--PRODUCTO 3-->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/INVICTUX ONIX.jpeg"
+                        alt="INVICTUX ONIX"
+                    />
+                
+                    <div class="button-group">
+                        <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>INVICTUX ONIX  100 ml</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </span>
+                    <p class="price">$144.522</p></p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/212 VIP MENN.jpeg" alt="212 VIP MENN" />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>212 VIP MEN 120ml</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </span>
+                    <p class="price">$170.000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-products">
+        <!-- Producto 4 -->
+        <div class="card-product">
+            <div class="container-img">
+                <img src="img/VERSACE WOMAN.jpeg" alt="VERSACE WOMAN " />
+                <span class="discount">-13%</span>
+                <div class="button-group">
+                    <span>
+                        <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="content-card-product">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h3>VERSACE WOMAN 120ml</h3>
+                <span class="add-cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </span>
+                <p class="price">$104.900 <span>$120.000</span></p>
+            </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="card-product">
+            <div class="container-img">
+                <img
+                    src="img/GOOD GIRL WOMAN.jpeg"
+                    alt="GOOD GIRL WOMAN"
+                />
+                <span class="discount">-22%</span>
+                <div class="button-group">
+                    <span>
+                        <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="content-card-product">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h3> GOOD GIRL WOMAN 100ml</h3>
+                <span class="add-cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </span>
+                <p class="price">$129.900 <span>$170.000</span></p>
+            </div>
+        </div>
+        <!--PRODUCTO 3-->
+        <div class="card-product">
+            <div class="container-img">
+                <img
+                    src="img/VICTORIA SECRET WOMAN.jpeg"
+                    alt="VICTORIA SECRET WOMAN"
+                />
+            
+                <div class="button-group">
+                    <span>
+                        <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="content-card-product">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>VICTORIA SECRET WOMAN  100 ml</h3>
+                <span class="add-cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </span>
+                <p class="price">$144.522</p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="card-product">
+            <div class="container-img">
+                <img src="img/GUCCI BAMBOO WOMAN.jpeg" alt="GUCCI BAMBOO WOMAN" />
+                <div class="button-group">
+                    <span>
+                        <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>
+                </div>
+            </div>
+            <div class="content-card-product">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h3>GUCCI BAMBOO WOMAN 120ml</h3>
+                <span class="add-cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </span>
+                <p class="price">$170.000</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="gallery">
+        <img
+            src="img/PNG NEGRO.png"
+            alt="Gallery Img1"
+            class="gallery-img-1"
+        /><img
+            src="img/logo-giove.jpg"
+            alt="Gallery Img2"
+            class="gallery-img-2"
+        /><img
+            src="img/PNG NEGRO.png"
+            alt="Gallery Img3"
+            class="gallery-img-3"
+        /><img
+            src="img/logo-giove.jpg"
+            alt="Gallery Img4"
+            class="gallery-img-4"
+        /><img
+            src="img/PNG NEGRO.png"
+            alt="Gallery Img5"
+            class="gallery-img-5"
+        />
+    </section>
+
+    <section class="container specials" id="Inspirados">
+        <h1 class="heading-1">Inspirados</h1>
+
+        <div class="container-products">
+            <!-- Producto 1 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/envase hombre100ml.jpeg" alt="lacoste Bleu 100ml" />
+                    
+                    <div class="button-group">
+                        <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Lacoste Bleu 100Ml</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </span>
+                    <p class="price">$20.000</p>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/envase hombre 30ml.jpeg"
+                        alt="orientica oud Saffron 30ml"
+                    />
+                    
+                    <div class="button-group">
+                        <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Orientica Oud Saffron 30ml</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </span>
+                    <p class="price">$22.000</p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="IMG/envase hombre 50ml.jpeg" alt="Carolina Herrera Good Girl 100ml" />
+                    <span class="discount">-16%</span>
+                    <div class="button-group">
+                        <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Moschino Toy Boy 50ml</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </span>
+                    <p class="price">$60.000<span>$50.400</span></p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/giove-playa.jpg" alt="CREED Silver Mountain Water 30Ml" />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>CREED Silver Mountain Water 30Ml</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </span>
+                    <p class="price">$20.000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-products">
+        <!-- Producto 1 -->
+        <div class="card-product">
+            <div class="container-img">
+                <img src="img/envase mujer 100ml.jpeg" alt="orientica Velvet Gold 50ml" />
+                
+                <div class="button-group">
+                    <span>
+                        <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="content-card-product">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h3>Orientica Velvet Gold 50Ml</h3>
+                <span class="add-cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </span>
+                <p class="price">$35.000</p>
+            </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="card-product">
+            <div class="container-img">
+                <img
+                    src="img/envase mujer 100mll.jpeg"
+                    alt="CARTIER.jpg"
+                />
+                
+                <div class="button-group">
+                    <span>
+                        <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="content-card-product">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h3>Lattafa Bade'e Al Oud Amethyst 100Ml</h3>
+                <span class="add-cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </span>
+                <p class="price">$60.000</p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="card-product">
+            <div class="container-img">
+                <img src="IMG/giove-perfume.jpg" alt="Carolina Herrera Good Girl 100ml" />
+                <span class="discount">-16%</span>
+                <div class="button-group">
+                    <span>
+                        <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="content-card-product">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>Carolina Herrera Good Girl EDP 100Ml</h3>
+                <span class="add-cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </span>
+                <p class="price">$60.000<span>$50.400</span></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="card-product">
+            <div class="container-img">
+                <img src="img/envase mujer 30ml.jpeg" alt="ORIENTICA Oud Saffron 30ml" />
+                <div class="button-group">
+                  <span>
+                            <i class="fa fa-shopping-cart" onclick="addToCart('Producto 1', 10)"></i>
+                        </span>
+                </div>
+            </div>
+            <div class="content-card-product">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h3>Lancome La Vie est Belle 30Ml</h3>
+                <span class="add-cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </span>
+                <p class="price">$20.000</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="container blogs">
+        <h1 class="heading-1">Halloween's Day Edition</h1>
+
+        <div class="container-blogs">
+            <div class="card-blog">
+                <div class="container-img">
+                    <img src="img/halloween-promo.png" alt="Feromonas blog" />
+                    <div class="button-group-blog">
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        
+                        
+                            
+                        
+                        
+                        <span>
+
+                            <i class="fa-solid fa-link"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-blog">
+                <p>
+                    <center>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        👻
+
+                    </center>
+                    
+                    
+                </p>
+                            
+                    
+                    
+
+                </div>
+            </div>
+            <div class="card-blog">
+                <div class="container-img">
+                    <img src="img/halloween.png" alt="Imagen Blog 2" />
+                    <div class="button-group-blog">
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <p>
+                        <span>
+                            
+                        </span>
+                        </p>
+
+
+
+                        <span>
+                            <i class="fa-solid fa-link"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-blog" id="tips">
+                    <h3>¡Hechiza tus Sentidos con Nuestros Perfumes Especiales de Halloween!</h3>
+                    <span>31 Octubre 2023</span>
+                    <p>
+                        Este Halloween, añade un toque mágico y misterioso a tu estilo con nuestros perfumes preparados exclusivamente para la temporada de brujas. En GIOVE, hemos creado fragancias únicas que capturan la esencia de la noche más embrujada del año.
+                    </p>
+                    <p>
+                    🎃 Experimenta aromas cautivadores que te transportarán a un bosque encantado.
+                    🌙 Notas misteriosas que despiertan la magia en cada gota.
+                    🔮 Perfumes diseñados para hechizar tus sentidos y dejar una impresión inolvidable.
+                    </p>
+                    <p>
+
+                    ¿Listo para embrujar con tu aroma? ¡Descubre nuestra colección especial de Halloween y sumérgete en un mundo de magia y misterio! ✨
+                    </p>
+                    <div class="btn-read-more">Ver más</div>
+                </div>
+            </div>
+            <div class="card-blog">
+                <div class="container-img">
+                    <img src="img/halloween-promo2.png" alt="Imagen Blog 3" />
+                    <div class="button-group-blog">
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-link"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-blog">
+                    <p>
+                        <center>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            👻 
+                        </center>
+                        
+                        
+                    </p>
+                    
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer" id="mas">
+    <div class="container container-footer">
+        <div class="menu-footer">
+            <div class="contact-info">
+                <p class="title-footer">Información de Contacto</p>
+                <ul>
+                    <li>
+                        Dirección: Cra. 29 C, Turbaco, Bolívar
+                                   Cra. 66 A, Cartagena, Bolívar
+
+                    </li>
+                    <li>Teléfono: 310 2203444</li>
+                    <li>Email: giovee863@gmail.com</li>
+                </ul>
+                <div class="social-icons">
+                    <span class="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </span>
+                    <span class="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <span class="youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </span>
+                    <span class="pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </span>
+                    <span class="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="information">
+                <p class="title-footer">Información</p>
+                <ul>
+                    <li><a href="#">Acerca de Nosotros</a></li>
+                    <li><a href="#">Información Delivery</a></li>
+                    <li><a href="#">Politicas de Privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Contactános</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="copyright">
+            <p>
+                DESARROLLADO POR PERFUMERÍA GIOVE
+            </p>
+
+            <img src="img/payment.png" alt="Pagos">
+        </div>
+    </div>
+</footer>
+<script src="carrito.js"></script>
+<script
+    src="https://kit.fontawesome.com/81581fb069.js"
+    crossorigin="anonymous"
+></script>
+</body>
+</html>
+</body>
+</html>

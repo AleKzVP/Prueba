@@ -33,6 +33,7 @@ const productController_1 = __importDefault(require("./Backend/src/controllers/p
 const db_1 = __importDefault(require("./Backend/db/db"));
 const multer_1 = __importDefault(require("multer"));
 let dbProductos = new db_1.default("./Backend/db/productos.json");
+let dbUsuarios = new db_1.default("./Backend/db/usuarios.json");
 (0, test_1.default)();
 console.log("inicializando aplicacion");
 console.log(test_1.avion, "   ", test_1.buque);
@@ -53,7 +54,7 @@ const upload = (0, multer_1.default)({ storage: multer_1.default.diskStorage({
 // Configura Express para servir archivos estáticos desde la carpeta definida
 app.use(express_1.default.static(staticFolder));
 app.use(express_1.default.json()); // app.use(express.static('build'));
-(0, productController_1.default)(app, dbProductos);
+(0, productController_1.default)(app, dbProductos, dbUsuarios);
 // Inicia el servidor
 app.listen(PORT, () => {
     console.log(`Servidor Express escuchando en el puerto http://localhost:${PORT}`);

@@ -1,0 +1,7 @@
+import sendForm from "./sendForm.js";
+async function Index(){
+    sendForm ("userForm",'/controller/registro')
+    sendForm ("loginForm",'/controller/login')
+}
+
+Index()
