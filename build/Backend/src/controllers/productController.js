@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 const encriptacion_1 = require("./encriptacion");
+const upload_1 = __importDefault(require("../../../uploads/upload"));
 dotenv_1.default.config();
 function productController(app, dbProductos, dbUsuarios) {
     // Manejador de ruta raíz
@@ -39,6 +40,17 @@ function productController(app, dbProductos, dbUsuarios) {
             estadoUsuario: "Usuario agregado"
         });
         dbUsuarios.save();
+    });
+    app.post('/controller/prueba', upload_1.default.single('image'), (req, res) => {
+        //dbProductos.load()
+        if (!req.file) {
+            return res.status(400).send('No se proporcionó ninguna imagen');
+        }
+        // La imagen se ha cargado correctamente, puedes acceder a ella con req.file
+        const imagePath = req.file.path;
+        // Aquí puedes realizar otras acciones con la imagen, como guardar su ruta en una base de datos, etc.
+        console.log(imagePath);
+        res.send('Imagen cargada exitosamente');
     });
     app.post('/controller/login', (req, res) => {
         console.log("DATOS DEL LOGIN ", req.body);

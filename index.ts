@@ -3,7 +3,6 @@ import path from 'path';
 import miImportacion,{avion,buque} from "./test" 
 import productController from './Backend/src/controllers/productController';
 import db from "./Backend/db/db"
-import multer from "multer"
 let dbProductos = new db("./Backend/db/productos.json")
 let dbUsuarios = new db("./Backend/db/usuarios.json")
 
@@ -18,18 +17,13 @@ const PORT = 3000;
 
 // Define la ruta de la carpeta estática ////ruta relativa
 const staticFolder = path.resolve('./FrontEnd/public');
+const uploadFolder = path.resolve('./uploads');
 //UPLOAD
-const upload = multer({ storage: multer.diskStorage({
-  destination: function (a:any, b:any, cb:any) {
-    cb(null, 'uploads/') // CAMBIAR LA Ruta donde se guardarán las imágenes
-  },
-  filename: function (a:any, file:any, cb:any) {
-    // Generar un nombre de archivo único para evitar colisiones
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-  }
-}) });
+
 // Configura Express para servir archivos estáticos desde la carpeta definida
 app.use(express.static(staticFolder));
+app.use("/uploads",express.static(uploadFolder));
+
 app.use(express.json()); // app.use(express.static('build'));
 productController(app,dbProductos,dbUsuarios)
 

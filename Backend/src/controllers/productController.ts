@@ -2,6 +2,7 @@ import { response } from "express";
 import db from "../../db/db";
 import dotenv, { decrypt } from 'dotenv';
 import { Codificar,Decodificar } from "./encriptacion";
+import upload from "../../../uploads/upload";
 dotenv.config();
 export default function productController(app:any,dbProductos:db, dbUsuarios:db):void {
 
@@ -15,14 +16,7 @@ app.post('/controller/products', (req:any, res:any) => {
     })
     res.json(filtro)
   });
-  app.post('/controller/addProduct', (req:any, res:any) => {
-    dbProductos.load()
-    dbProductos.data.push(req.body)
-    dbProductos.save()
-    res.json({
-        response: "El proceso ha sido satisfactorio"
-    })
-  });
+
   app.post('/controller/registro', (req:any, res:any) => {
     dbUsuarios.load()
     let usuarioRegistrado = {...req.body}
@@ -38,6 +32,25 @@ app.post('/controller/products', (req:any, res:any) => {
     })
     dbUsuarios.save() 
   });
+
+  app.post('/controller/uploadProducts', upload.single('image'), (req:any, res:any) => {
+    dbProductos.load()
+    if (!req.file) {
+      return res.status(400).send('No se proporcionó ninguna imagen');
+    }
+    
+    // La imagen se ha cargado correctamente, puedes acceder a ella con req.file
+    const imagePath = req.file.path;
+    console.log(req.body.propiedad)
+    let producto={...req.body}
+    producto.image=imagePath.replaceAll("\\","/")
+    dbProductos.data.push(producto)
+    dbProductos.save()    
+    // Aquí puedes realizar otras acciones con la imagen, como guardar su ruta en una base de datos, etc.
+    console.log(imagePath)
+    res.send('Imagen cargada exitosamente');
+
+  })
 
   app.post('/controller/login', (req:any, res:any) => {
     console.log("DATOS DEL LOGIN ",req.body)
