@@ -1,19 +1,11 @@
 import express from 'express';
 import path from 'path';
-import miImportacion,{avion,buque} from "./test" 
 import productController from './Backend/src/controllers/productController';
 import db from "./Backend/db/db"
 let dbProductos = new db("./Backend/db/productos.json")
 let dbUsuarios = new db("./Backend/db/usuarios.json")
-
-miImportacion()
-console.log("inicializando aplicacion");
-console.log(avion,"   ",buque);
-
-
 const app = express();
 const PORT = 3000;
-
 
 // Define la ruta de la carpeta estática ////ruta relativa
 const staticFolder = path.resolve('./FrontEnd/public');
