@@ -1,18 +1,28 @@
-export default function product(){
+// http://localhost:3000/controller/products
+const urlDefault = "assets/images/products/giove-perfume3.jpg";
+export default function product({
+    image = "assets/images/products/giove-perfume3.jpg",
+    nombre = "nothing",
+    precio = "0.000",
+    cantidad = "0",
+    categoria = "nothing",
+    genero = "nothing",
+    tamaño = "nothing",
+}){
+    image = image.replaceAll(" ", "")==""?urlDefault:image;
     return `
         <div class="col-lg-3 col-md-6 col-12">
-            <!-- Start Single Product -->
             <div class="single-product">
                 <div class="product-image">
-                    <img src="assets/images/products/giove-perfume3.jpg" alt="#">
+                    <img src="${image}" alt="#">
                     <div class="button">
                         <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart </a>
                     </div>
                 </div>
                 <div class="product-info">
-                    <span class="category">Watches</span>
+                    <span class="category">${genero}</span>
                     <h4 class="title">
-                        <a href="product-grids.html">Xiaomi Mi Band 5</a>
+                        <a href="product-grids.html">${nombre}</a>
                     </h4>
                     <ul class="review">
                         <li><i class="lni lni-star-filled"></i></li>
@@ -23,11 +33,10 @@ export default function product(){
                         <li><span>4.0 Review(s)</span></li>
                     </ul>
                     <div class="price">
-                        <span>$199.00</span>
+                        <span>${precio}</span>
                     </div>
                 </div>
             </div>
-            <!-- End Single Product -->
         </div>
     `
 }

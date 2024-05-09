@@ -1,6 +1,15 @@
 import productElement from "./components/product.js"
-const ElementList = document.getElementById("Products");
-ElementList.innerHTML = "";
-for (let i = 0; i < 4; i++) {
-    ElementList.innerHTML += productElement();
+import fetchPost from "./libs/fetchPost.js"
+async function caballero(){
+    const callDat = {
+        data:{requiero:"navidad"},
+        endPoint:"/controller/products", 
+    }
+    const LoadElements = await fetchPost(callDat)
+    const ElementList = document.getElementById("Products");
+    ElementList.innerHTML = "";
+    LoadElements.forEach(element => {
+        ElementList.innerHTML += productElement(element);
+    });
 }
+caballero()
