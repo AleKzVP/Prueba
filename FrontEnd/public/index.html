@@ -1,166 +1,594 @@
 <!DOCTYPE html>
-<html lang="es">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<title>GIOVE</title>
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<header>
-			
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>GIOVE</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+   
+
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <!-- Start Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="top-left">
+                            <ul class="menu-top-link">
+                               
+                                <li>
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="top-middle">
+                            <ul class="useful-links">
+                               
+                                <li><a href="index.html">G I O V E </a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="top-end">
+                            <div class="user">
+                                <i class="lni lni-user"></i>
+                               
+                            </div>
+                            <ul class="user-login">
+                               
+                                <li>
+                                    <a href="usuario.html">INICIAR SESIÓN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Topbar -->
+        <!-- Start Header Middle -->
+        <div class="header-middle">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-3 col-7">
+                        <!-- Start Header Logo -->
+                        <a class="navbar-brand" href="index.html">
+                            <img src="./img/PNG NEGRO.png" alt="" style="height: 100px; width: 90px; padding-top: 20px;"></a> 
+                            
+                        </a>
+                        <!-- End Header Logo -->
+                    </div>
+                    <div class="col-lg-5 col-md-7 d-xs-none">
+                        <!-- Start Main Menu Search -->
+                        <div class="main-menu-search">
+                            <!-- navbar search start -->
+                            <div class="navbar-search search-style-5">
+                                <div class="search-select">
+                                   
+                                </div>
+                                <div class="search-input">
+                                    <input type="text" placeholder="Buscar">
+                                </div>
+                                <div class="search-btn">
+                                    <button><i class="lni lni-search-alt"></i></button>
+                                </div>
+                            </div>
+                            <!-- navbar search Ends -->
+                        </div>
+                        <!-- End Main Menu Search -->
+                    </div>
+                    <div class="col-lg-4 col-md-2 col-5">
+                        <div class="middle-right-area">
+                            <div class="nav-hotline">
+                                <i class="lni lni-phone"></i>
+                                <h3>Atención al usuario:
+                                    <span>(+57 310-220-3444)</span>
+                                </h3>
+                            </div>
+                            <div class="navbar-cart">
+                                <div class="wishlist">
+                                    <a href="javascript:void(0)">
+                                        <i class="lni lni-heart"></i>
+                                        <span class="total-items">0</span>
+                                    </a>
+                                </div>
+                                <div class="cart-items">
+                                    <a href="javascript:void(0)" class="main-btn">
+                                        <i class="lni lni-cart"></i>
+                                        <span class="total-items">0</span>
+                                    </a>
+                                    <!-- Shopping Item -->
+                                    <div class="shopping-item">
+                                        <div class="dropdown-cart-header">
+                                            <span>2 Items</span>
+                                            <a href="cart.html">View Cart</a>
+                                        </div>
+                                        <ul class="shopping-list">
+                                            <li>
+                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                        class="lni lni-close"></i></a>
+                                                <div class="cart-img-head">
+                                                    <a class="cart-img" href="product-details.html"><img
+                                                            src="assets/images/header/cart-items/item1.jpg" alt="#"></a>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h4><a href="product-details.html">
+                                                            Apple Watch Series 6</a></h4>
+                                                    <p class="quantity">1x - <span class="amount">$99.00</span></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                        class="lni lni-close"></i></a>
+                                                <div class="cart-img-head">
+                                                    <a class="cart-img" href="product-details.html"><img
+                                                            src="assets/images/header/cart-items/item2.jpg" alt="#"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <h4><a href="product-details.html">Wi-Fi Smart Camera</a></h4>
+                                                    <p class="quantity">1x - <span class="amount">$35.00</span></p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="bottom">
+                                            <div class="total">
+                                                <span>Total</span>
+                                                <span class="total-amount">$134.00</span>
+                                            </div>
+                                            <div class="button">
+                                                <a href="checkout.html" class="btn animate">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/ End Shopping Item -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Middle -->
+        <!-- Start Header Bottom -->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-6 col-12">
+                    <div class="nav-inner">
+                        <!-- Start Mega Category Menu -->
+                        <div class="mega-category-menu">
+                          
+                              
+                                      
+                                        
+                              
+                        </div>
+                        <!-- End Mega Category Menu -->
+                        <!-- Start Navbar -->
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="index.html" class="active" aria-label="Toggle navigation">Inicio</a>
+                                    </li>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
+                                            data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent"
+                                            aria-expanded="false" aria-label="Toggle navigation">Catálogo</a>
+                                        <ul class="sub-menu collapse" id="submenu-1-3">
+                                            <li class="nav-item"><a href="caballero.html">Caballero</a></li>
+                                            <li class="nav-item"><a href="dama.html"> Dama</a></li>
+                                           
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
+                                            data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent"
+                                            aria-expanded="false" aria-label="Toggle navigation">Tips</a> <a href="index.html"></a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav>
+                        <!-- End Navbar -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Nav Social -->
+                    <div class="nav-social">
+                        <h5 class="title">Síguenos:</h5>
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/giove__86" target="_blank"><i class="lni lni-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Nav Social -->
+                </div>
+            </div>
+        </div>
+        <!-- End Header Bottom -->
+    </header>
+    <!-- End Header Area -->
+
+      <!-- Start Hero Area -->
+      <section class="hero-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12 custom-padding-right">
+                    <div class="slider-head">
+                        <!-- Start Hero Slider -->
+                        <div class="hero-slider">
+                            <!-- Start Single Slider -->
+                            <div class="single-slider"
+                                style="background-image: url(assets/images/hero/BANER\ HERO.jpeg);">
+                                <div class="content">
+                                    <h2><span>Caballero</span>
+                                        Lattafa Oud for Glory
+                                    </h2>                    
+                                    <p>El perfume árabe que te hará brillar con luz propia. Descubre su aroma opulento y embriagador, 
+                                        ¡y conviértete en el centro de atención dondequiera que vayas!</p>
+                                    <h3><span>Por tan solo:</span> $159.900</h3>
+                                    <div class="button">
+                                        <a href="product-grids.html" class="btn">¡COMPRAR AHORA!</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Slider -->
+                            <!-- Start Single Slider -->
+                            <div class="single-slider"
+                                style="background-image: url(assets/images/hero/BANER\ HERO\ 2.jpeg);">
+                                <div class="content">
+                                    <h2><span>Dama</span>
+                                        ORIENTICA Velvet Gold
+                                    </h2>
+                                    <p>Descubre el encanto del Oriente con Orientica Velvet Gold. Su fragancia envolvente y seductora
+                                        te transportará a un mundo de lujo y sofisticación. ¡Aprovecha nuestra promoción exclusiva y añade este perfume a tu colección hoy mismo!</p>
+                                    <h3><span>Por tan solo:</span> $149.900</h3>
+                                    <div class="button">
+                                        <a href="product-grids.html" class="btn">¡LO QUIERO!</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Slider -->
+                        </div>
+                        <!-- End Hero Slider -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6 col-12 md-custom-padding">
+                            <!-- Start Small Banner -->
+                            <div class="hero-small-banner"
+                                style="background-image: url('assets/images/hero/LOGO\ BANER\ 3.jpeg');">
+                                <div class="content">
+                                    <h2>
+                                        <span>Dama</span>
+                                        Coco Channel <br>
+                                        Mademoiselle <br>
+                                        100ml <br>
+                                    </h2>
+                                    <h3>$59.000</h3><BR></BR>
+                                    <div class="button">
+                                        <a class="btn" href="product-grids.html">COMPRAR</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Small Banner -->
+                        </div>
+                        <div class="col-lg-12 col-md-6 col-12">
+                            <!-- Start Small Banner -->
+                            <div class="hero-small-banner style2"
+                                style="background-image: url('assets/images/hero/LOGO\ BANER4.jpeg');">
+                                <div class="content">   
+                                    <span>Caballero</span>                                 
+                                    <h2>
+                                        Christian Dior <br>
+                                        SAUVAGE <br>
+                                    </h2>
+                                    <h3>$59.000</h3><BR></BR>
+                                    <div class="button">
+                                        <a class="btn" href="product-grids.html">COMPRAR</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
     
-			<div class="container-hero">
-				<div class="container hero">
-					<div class="customer-support">
-						
-						<div class="content-customer-support">
-							<span class="text"></span>
-							<span class="number"></span>
-						</div>
-					</div>
+                            <!-- Start Small Banner -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Area -->
 
-					<div class="container-logo">
-						
-						<h1 class="logo"><a href="">G  I  O  V  E</a></h1>
-					</div>
+    <!-- Start Trending Product Area -->
 
-					<div class="container-user">
-						<a href="usuario.html"><img src="img\usuario-del-portapapeles.png" class="icono1" ></a>
-						<div class="content-shopping-cart">
-							<a href="buscar.html"><img src="img\lupa.png" class="icono2"></a>
-							<a href="carrito.html"><img src="img\bolsas-de-compras.png" class="icono3"></a>
-							
-						</div>
-					</div>
-				</div>
-			</div>
+    <!-- End Trending Product Area -->
 
-			<div class="container-navbar">
-				<nav class="navbar container">
-					
-					
-					<ul class="menu">
-						
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="catalogo.html">Catálogo</a></li>
-						<li><a href="tips.html">Tips</a></li>
-						
-					</ul>
-					
-					
-						</button>
-					</form>
-				</nav>
-			</div>
-		</header>
+    <!-- Start Call Action Area -->
+    <section class="call-action section">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <div class="inner">
+                        <div class="content">
+                            <h2 class="wow fadeInUp" data-wow-delay=".4s">Sumérgete en nuestro catálogo<br>
+                                lleno de maravillas olfativas.</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".6s">Nos aseguramos de brindarte una
+                                experiencia <br> como ninguna otra.</p>
+                            <div class="button wow fadeInUp" data-wow-delay=".8s">
+                                <a href="caballero.html" class="btn">Ver catálogo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Call Action Area -->
 
-		<section class="banner">
-			<div class="content-banner">
-				<p>Fragancias únicas</p>
-				<h2>para personas <br />únicas.</h2>
-				<a href="catalogo.html">Comprar ahora</a>
-			</div>
-		</section>
+    <!-- Start Banner Area -->
+    
+    <!-- End Banner Area -->
 
-		<main class="main-content">
-			<section class="container container-features">
-				<div class="card-feature">
-					<i class="fa-solid fa-plane-up"></i>
-					<div class="feature-content">
-						<span>Las mejores fragancias</span>
-						<p>Desde 20.000 pesos</p>
-					</div>
-				</div>
-				<div class="card-feature">
-					<i class="fa-solid fa-wallet"></i>
-					<div class="feature-content">
-						<span>Contrareembolso</span>
-						<p>100% garantía de devolución de dinero</p>
-					</div>
-				</div>
-				<div class="card-feature">
-					<i class="fa-solid fa-gift"></i>
-					<div class="feature-content">
-						<span>Los mejores precios del mercado</span>
-						<p>Porque oler sabroso no tiene porqué ser costoso</p>
-					</div>
-				</div>
-				<div class="card-feature">
-					<i class="fa-solid fa-headset"></i>
-					<div class="feature-content">
-						<span>Servicio al cliente de alta calidad</span>
-						<p>Contáctenos al 310 2203444</p>
-					</div>
-				</div>
-			</section>
+    <!-- Start Shipping Info -->
+    <section class="shipping-info">
+        <div class="container">
+            <ul>
+                <!-- Free Shipping -->
+               
+                <!-- Money Return -->
+               
+        </div>
+    </section>
+    <!-- End Shipping Info -->
 
-			
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-12">
+                            <div class="footer-logo">
+                                <a href="index.html">
+                                    <img src="./img/PNG NEGRO.png" alt=""  style="height: 150px; width: 150px; padding-top: 20px;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-12">
+                            <div class="footer-newsletter">
+                                    <h4 class="title">
+                                        Subscribete para tener mejores ofertas
+                                        <span>G I O V E.</span>
+                                </h4>
+                                <div class="newsletter-form-head">
+                                    <form action="#" method="get" target="_blank" class="newsletter-form">
+                                        <input name="EMAIL" placeholder="Email address here..." type="email">
+                                        <div class="button">
+                                            <button class="btn">Subscribe<span class="dir-part"></span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Top -->
+        <!-- Start Footer Middle -->
+        <div class="footer-middle">
+            <div class="container">
+                <div class="bottom-inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-contact">
+                                <h3>HORARIOS DE ATENCIÓN</h3>
+                                <p class="phone">Phone: (+57 310-220-3444)</p>
+                                <ul>
+                                    <li><span>LUNES-VIERNES: </span> 9.00 am - 8.00 pm</li>
+                                    <li><span>SABADO: </span> 10.00 am - 6.00 pm</li>
+                                </ul>
+                                <p class="mail">
+                                    <a href="mailto:support@shopgrids.com">support@giove.com</a>
+                                </p>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer our-app">
+                                <h3>Nuestra aplicación móvil</h3>
+                                <ul class="app-btn">
+                                    <li>
+                                        <a href="">
+                                            <i class="lni lni-apple"></i>
+                                            <span class="small-title">MUY PRONTO EN</span>
+                                            <span class="big-title">App Store</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="lni lni-play-store"></i>
+                                            <span class="small-title">MUY PRONTO EN </span>
+                                            <span class="big-title">Google Play</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-link">
+                                <h3>Information</h3>
+                                <ul>
+                                    <li><a href="javascript:void(0)">About Us</a></li>
+                                    <li><a href="javascript:void(0)">Contact Us</a></li>
+                                  
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Single Widget -->
+                        
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Middle -->
 
-		<footer class="footer" id="mas">
-			<div class="container container-footer">
-				<div class="menu-footer">
-					<div class="contact-info">
-						<p class="title-footer">Información de Contacto</p>
-						<ul>
-							<li>
-								Dirección: Cra. 29 C, Turbaco, Bolívar
-								           Cra. 66 A, Cartagena, Bolívar
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Single Widget -->
+                        
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Middle -->
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-12">
+                            <div class="payment-gateway">
+                                <span>We Accept:</span>
+                                <img src="assets/images/footer/credit-cards-footer.png" alt="#">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="copyright">
+                                <p>Diseño y Desarrollo <a href="" rel="nofollow"
+                                        target="_blank">G I O V E </a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <ul class="socila">
+                                <li>
+                                    <span>Follow Us On:</span>
+                                </li>
+                                
+                                <a href="https://www.instagram.com/giove__86" target="_blank"><i class="lni lni-instagram"></i></a>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Bottom -->
+    </footer>
+    <!--/ End Footer Area -->
 
-							</li>
-							<li>Teléfono: 310 2203444</li>
-							<li>Email: giovee863@gmail.com</li>
-						</ul>
-						<div class="social-icons">
-							<span class="facebook">
-								<i class="fa-brands fa-facebook-f"></i>
-							</span>
-							<span class="twitter">
-								<i class="fa-brands fa-twitter"></i>
-							</span>
-							<span class="youtube">
-								<i class="fa-brands fa-youtube"></i>
-							</span>
-							<span class="pinterest">
-								<i class="fa-brands fa-pinterest-p"></i>
-							</span>
-							<span class="instagram">
-								<i class="fa-brands fa-instagram"></i>
-							</span>
-						</div>
-					</div>
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-chevron-up"></i>
+    </a>
 
-					<div class="information">
-						<p class="title-footer">Información</p>
-						<ul>
-							<li><a href="#">Acerca de Nosotros</a></li>
-							<li><a href="#">Información Delivery</a></li>
-							<li><a href="#">Politicas de Privacidad</a></li>
-							<li><a href="#">Términos y condiciones</a></li>
-							<li><a href="#">Contactános</a></li>
-						</ul>
-					</div>
-					
-				</div>
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        //========= Hero Slider 
+        tns({
+            container: '.hero-slider',
+            slideBy: 'page',
+            autoplay: true,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            gutter: 0,
+            items: 1,
+            nav: false,
+            controls: true,
+            controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
+        });
 
-				<div class="copyright">
-					<p>
-						DESARROLLADO POR PERFUMERÍA GIOVE
-					</p>
+        //======== Brand Slider
+        tns({
+            container: '.brands-logo-carousel',
+            autoplay: true,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            gutter: 15,
+            nav: false,
+            controls: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 3,
+                },
+                768: {
+                    items: 5,
+                },
+                992: {
+                    items: 6,
+                }
+            }
+        });
+    </script>
+</body>
 
-					<img src="img/payment.png" alt="Pagos">
-				</div>
-			</div>
-		</footer>
-
-		<script
-			src="https://kit.fontawesome.com/81581fb069.js"
-			crossorigin="anonymous"
-		></script>
-	</body>
 </html>

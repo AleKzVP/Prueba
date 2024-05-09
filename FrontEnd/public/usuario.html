@@ -9,9 +9,8 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>GIOVE</title>
-		<link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="usuario.css" />
-		<script defer type="module" src="usuario.js"></script>
+		<link rel="stylesheet" href="assets\css\usuario.css" />
+		
        
 	</head>
 	<body>
@@ -25,7 +24,7 @@
         
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form id="userForm">
+		<form action="#">
 			<h1>Crear cuenta</h1>
 			<div class="social-container">
 				<a href="#" class="social"><img src="img\social.png" style="width: 30px; height: 30px;"></a>
@@ -33,14 +32,14 @@
 				<a href="#" class="social"><img src="img\facebook.png" style="width: 30px; height: 30px;"></a>
 			</div>
 			<span>usa tu nombre y email para registrarte</span>
-			<input type="text" name="name" placeholder="Name" />
-			<input type="email" name="email" placeholder="Email" />
-			<input type="password" name="password" placeholder="Password" />
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
 			<button>Registrate</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form id="loginForm">
+		<form action="#">
 			<h1>Iniciar sesion</h1>
 			<div class="social-container">
 				<a href="#" class="social"><img src="img\social.png" style="width: 30px; height: 30px;"></a>
@@ -48,8 +47,8 @@
 				<a href="#" class="social"><img src="img\facebook.png" style="width: 30px; height: 30px;"></a>
 			</div>
 			<span>usa tu cuenta</span>
-			<input type="email" name="email" placeholder="Email" />
-			<input type="password" name="password" placeholder="Contraseña" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Contraseña" />
 			<a href="#">Olvidaste tu contraseña?</a>
 			<button>Iniciar sesion</button>
 		</form>
@@ -65,6 +64,7 @@
 				<h1>Hola somos GIOVE</h1>
 				<p>Introduce tus datos personales y comienza tu viaje con nosotros.</p>
 				<button class="ghost" id="signUp">Registrate</button>
+                <script src="\assets\js\usuario.js"></script>
 			</div>
 		</div>
 	</div>
