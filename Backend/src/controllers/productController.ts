@@ -11,9 +11,14 @@ export default function productController(app:any,dbProductos:db, dbUsuarios:db)
 app.post('/controller/products', (req:any, res:any) => {
     dbProductos.load()
     let productos: Array<any>= [] = dbProductos.data
-    let filtro = productos.filter((producto:any)=>{
-        return producto.categoria==req.body.requiero
-    })
+    let filtro;
+    if (req.body.requiero==undefined) {
+      filtro = productos;
+    }else{
+      filtro = productos.filter((producto:any)=>{
+          return producto.categoría==req.body.requiero
+      })
+    }
     res.json(filtro)
   });
 
