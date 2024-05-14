@@ -1,4 +1,4 @@
-export default function fetchForm({formID, endPoint}) {
+export default function fetchForm({formID="", endPoint=""}) {
     return new Promise((resolve, reject) => {
         const form = document.getElementById(formID);
         const formData = new FormData(form);

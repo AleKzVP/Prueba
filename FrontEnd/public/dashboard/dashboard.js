@@ -1,13 +1,12 @@
 import fetchObjForm from "../libs/fetchObjForm.js";
+import fetchPost from "../libs/fetchPost.js";
 import itemFunction from "./components/itemFunction.js";
 import itemNew from "./components/itemNew.js";
-function main() {
+async function main() {    
     const elementTable = document.getElementById("TableItems");
     const buttonAddProduct = document.getElementById("addProduct")
-    let ELEMENTS =[
-        ()=>{obj_Element.ID = 1; return obj_Element;},        
-        ()=>{obj_Element.ID = 2; return obj_Element;},        
-    ]
+    let Products = await fetchPost({endPoint:"/controller/products"});
+    elementTable.innerHTML = "";
     let obj_Element = {
         elementTable, 
         ID:1, 
@@ -22,8 +21,13 @@ function main() {
             console.log(data, "= delete element");
         },
     }
+    let ELEMENTS =[]
+    Products.forEach((element, index)=>{
+        let cloneObject = {...obj_Element, ...element};
+        cloneObject.ID = index+1;
+        ELEMENTS.push(()=>cloneObject);
+    })
     
-    elementTable.innerHTML = "";
     
     ELEMENTS.forEach((element)=>{
         itemFunction(element());

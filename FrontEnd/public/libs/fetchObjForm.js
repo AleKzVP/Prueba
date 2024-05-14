@@ -1,4 +1,4 @@
-export default function fetchObjForm({ObjectSend, endPoint}) {
+export default function fetchObjForm({ObjectSend={}, endPoint=""}) {
     return new Promise((resolve, reject) => {
         const formData = new FormData();
         for (const key in ObjectSend) {

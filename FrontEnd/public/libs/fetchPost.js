@@ -1,4 +1,4 @@
-export default function fetchPost({data, endPoint}){
+export default function fetchPost({data={}, endPoint=""}){
     return new Promise((resolve, reject) => {
         fetch(endPoint.replaceAll(" ", ""), {
             method: 'POST',
