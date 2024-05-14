@@ -1,15 +1,6 @@
 [
     {
         "ID": "1",
-        "nombre": "212 VIP MEN WILD PARTY",
-        "precio": "159.000",
-        "cantidad": "15",
-        "categoria": "halloween",
-        "genero": "masculino",
-        "image": "uploads/image-1715664470571.jpeg"
-    },
-    {
-        "ID": "2",
         "nombre": " BVLGARI Man In Black Eau De Parfum",
         "precio": "139.000",
         "cantidad": "12",
@@ -18,12 +9,21 @@
         "image": "uploads/image-1715664576355.jpeg"
     },
     {
-        "ID": "3",
+        "ID": "2",
         "nombre": "Carolina Herrera Good Girl Eau De Parfum",
         "precio": "110.000",
         "cantidad": "7",
         "categoria": "halloween",
         "genero": "femenino",
         "image": "uploads/image-1715664704894.jpeg"
+    },
+    {
+        "ID": "3",
+        "nombre": "212 VIP BLACK",
+        "precio": "140.000",
+        "cantidad": "2",
+        "categoria": "halloween",
+        "genero": "masculino",
+        "image": "uploads/image-1715668596062.jpeg"
     }
 ]
