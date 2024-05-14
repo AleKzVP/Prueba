@@ -43,7 +43,7 @@ async function main() {
                     break;
                 }
             }else{
-                newID = i;
+                newID = ELEMENTS.length + 1;
             }
         }
         itemNew({
