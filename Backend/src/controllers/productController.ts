@@ -12,13 +12,19 @@ app.post('/controller/products', (req:any, res:any) => {
     dbProductos.load()
     let productos: Array<any>= [] = dbProductos.data
     let filtro;
-    if (req.body.requiero==undefined) {
-      filtro = productos;
-    }else{
+    if (req.body.genero!=undefined) {  
       filtro = productos.filter((producto:any)=>{
-          return producto.categoría==req.body.requiero
+        if (producto.genero) {
+          return producto.genero.toLowerCase()==req.body.genero.toLowerCase()
+        }
       })
+      res.json(filtro); return;
     }
+    if (req.body.requiero!=undefined) {
+      filtro = productos.filter((producto:any)=>{return producto.categoría==req.body.requiero})
+      res.json(filtro); return;
+    }
+    filtro = productos;
     res.json(filtro)
   });
 

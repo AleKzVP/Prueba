@@ -54,6 +54,7 @@ export default function itemNew({
                 element.value = "";
             }, "input")
             data["image"] = selectFile;
+            data["genero"] = obtenerGeneroAleatorio();
             onEdit(data);
             nuevoElemento.remove();
         }else{
@@ -61,4 +62,8 @@ export default function itemNew({
         }
     })
     return nuevoElemento;
+}
+
+function obtenerGeneroAleatorio() {
+    return Math.random() < 0.5 ? 'masculino' : 'femenino';
 }
