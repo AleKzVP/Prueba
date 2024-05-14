@@ -46,6 +46,7 @@ async function main() {
                 newID = ELEMENTS.length + 1;
             }
         }
+        // arreglo
         itemNew({
             elementTable,
             onEdit:async (data)=>{
