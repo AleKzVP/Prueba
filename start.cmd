@@ -1,4 +1,4 @@
 @echo off
 cls
-npm install & npm run bunn
+npm install -g bun & npm install & npm run bunn
 

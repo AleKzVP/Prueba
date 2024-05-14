@@ -1,1 +1,29 @@
-[{"ID":"1","nombre":"Versace Yellow Diamond","precio":"140.000","cantidad":"5","categoria":"halloween","genero":"femenino","image":"uploads/image-1715663197911.jpg"},{"ID":"2","nombre":"212 VIP MEN WILD PARTY","precio":"159.000","cantidad":"15","categoria":"halloween","genero":"masculino","image":"uploads/image-1715664470571.jpeg"},{"ID":"3","nombre":" BVLGARI Man In Black Eau De Parfum","precio":"139.000","cantidad":"12","categoria":"halloween","genero":"masculino","image":"uploads/image-1715664576355.jpeg"}]
+[
+    {
+        "ID": "1",
+        "nombre": "212 VIP MEN WILD PARTY",
+        "precio": "159.000",
+        "cantidad": "15",
+        "categoria": "halloween",
+        "genero": "masculino",
+        "image": "uploads/image-1715664470571.jpeg"
+    },
+    {
+        "ID": "2",
+        "nombre": " BVLGARI Man In Black Eau De Parfum",
+        "precio": "139.000",
+        "cantidad": "12",
+        "categoria": "halloween",
+        "genero": "masculino",
+        "image": "uploads/image-1715664576355.jpeg"
+    },
+    {
+        "ID": "3",
+        "nombre": "Carolina Herrera Good Girl Eau De Parfum",
+        "precio": "110.000",
+        "cantidad": "7",
+        "categoria": "halloween",
+        "genero": "femenino",
+        "image": "uploads/image-1715664704894.jpeg"
+    }
+]

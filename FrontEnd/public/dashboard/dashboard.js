@@ -19,6 +19,7 @@ async function main() {
         },
         onDelete:(data)=>{
             console.log(data, "= delete element");
+            fetchPost({data:{ID:data},endPoint:'/controller/deleteProducts'})
         },
     }
     let ELEMENTS =[]

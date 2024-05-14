@@ -8,6 +8,18 @@ export default function productController(app:any,dbProductos:db, dbUsuarios:db)
 
     // Manejador de ruta raíz
 //primer parámetro hace referencia a una url del navegador ('/test')
+app.post('/controller/deleteProducts', (req:any, res:any) => {
+  dbProductos.load()
+  let productos: Array<any>= [] = dbProductos.data
+  productos = productos.filter((producto:any)=>{
+    if (producto.ID) {
+      return String(producto.ID)!==String (req.body.ID)
+    }
+  })
+  dbProductos.data=productos
+  dbProductos.save() 
+  
+})
 app.post('/controller/products', (req:any, res:any) => {
     dbProductos.load()
     let productos: Array<any>= [] = dbProductos.data
