@@ -35,6 +35,7 @@ async function main() {
     
     buttonAddProduct.addEventListener("click", ()=>{
         let newID;
+        // Carga de elementos
         for (let i = 1; i < ELEMENTS.length + 1; i++) {
             if (i < ELEMENTS.length) {
                 if (ELEMENTS[i]().ID != i) {
