@@ -23,9 +23,11 @@ async function main() {
         },
     }
     let ELEMENTS =[]
+    let IDS = []
     Products.forEach((element, index)=>{
         let cloneObject = {...obj_Element, ...element};
         ELEMENTS.push(()=>cloneObject);
+        IDS.push(Number(cloneObject.ID));
     })
     
     
@@ -34,7 +36,7 @@ async function main() {
     })
     
     buttonAddProduct.addEventListener("click", ()=>{
-        const newID = getNewID(ELEMENTS);
+        let newID = Math.max(...IDS)+1;
         // arreglo
         itemNew({
             elementTable,
@@ -52,20 +54,3 @@ async function main() {
 }
 main();
 
-
-
-function getNewID(elementFunctions) {
-    // Crear un conjunto con los IDs existentes
-    const existingIds = new Set();
-    elementFunctions.forEach(func => {
-      const element = func();
-      if (element.hasOwnProperty('ID')) {
-        existingIds.add(element.ID);
-      }
-    });  
-    // Encontrar el primer ID faltante
-    // Arreglo envio
-    let newId = 1;
-    while (existingIds.has(newId)) {newId++;}
-    return newId;
-  }
