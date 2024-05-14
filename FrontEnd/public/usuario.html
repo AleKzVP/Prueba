@@ -1,76 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
+<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<title>GIOVE</title>
-		<link rel="stylesheet" href="assets\css\usuario.css" />
-		
-       
-	</head>
-	<body>
-        <br>
-        <br>
-        <a href="index.html"><img src="img\logo letras back.png" alt="" style="height: 100px; padding-top: 30px;"></a>
-        
-		<br>
-        <br>
-        
-        
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>Crear cuenta</h1>
-			<div class="social-container">
-				<a href="#" class="social"><img src="img\social.png" style="width: 30px; height: 30px;"></a>
-				<a href="#" class="social"><img src="img\x.png" style="width: 30px; height: 30px;"></a>
-				<a href="#" class="social"><img src="img\facebook.png" style="width: 30px; height: 30px;"></a>
-			</div>
-			<span>usa tu nombre y email para registrarte</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Registrate</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>Iniciar sesion</h1>
-			<div class="social-container">
-				<a href="#" class="social"><img src="img\social.png" style="width: 30px; height: 30px;"></a>
-				<a href="#" class="social"><img src="img\x.png" style="width: 30px; height: 30px;"></a>
-				<a href="#" class="social"><img src="img\facebook.png" style="width: 30px; height: 30px;"></a>
-			</div>
-			<span>usa tu cuenta</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Contraseña" />
-			<a href="#">Olvidaste tu contraseña?</a>
-			<button>Iniciar sesion</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Bienvenido de nuevo!</h1>
-				<p>contacta a soporte para mas Información</p>
-				<button class="ghost" id="signIn">Iniciar sesion</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Hola somos GIOVE</h1>
-				<p>Introduce tus datos personales y comienza tu viaje con nosotros.</p>
-				<button class="ghost" id="signUp">Registrate</button>
-                <script src="\assets\js\usuario.js"></script>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>GIOVE</title>
+	<link rel="stylesheet" href="assets/css/usuario.css" />
+</head>
+
+<body>
+	<br>
+	<br>
+	<a href="index.html">
+		<img src="img/logo letras back.png" alt="" style="height: 100px; padding-top: 30px;">
+	</a>
+	<br>
+	<br>
+
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+			<form id="registerForm" action="#">
+				<h1>Crear cuenta</h1>
+				<div class="social-container">
+					<a href="#" class="social"><img src="img/social.png" style="width: 30px; height: 30px;"></a>
+					<a href="#" class="social"><img src="img/x.png" style="width: 30px; height: 30px;"></a>
+					<a href="#" class="social"><img src="img/facebook.png" style="width: 30px; height: 30px;"></a>
+				</div>
+				<span>Usa tu nombre y email para registrarte</span>
+				<input type="name" name="name" placeholder="Nombre" />
+				<input type="email" name="email" placeholder="Correo" />
+				<input type="password" name="password" placeholder="Contraseña" />
+				<button>Registrate</button>
+			</form>
+		</div>
+		<div class="form-container sign-in-container">
+			<form id="formularioLogin" action="#">
+				<h1>Iniciar sesion</h1>
+				<div class="social-container">
+					<a href="#" class="social"><img src="img/social.png" style="width: 30px; height: 30px;"></a>
+					<a href="#" class="social"><img src="img/x.png" style="width: 30px; height: 30px;"></a>
+					<a href="#" class="social"><img src="img/facebook.png" style="width: 30px; height: 30px;"></a>
+				</div>
+				<span>Usa tu cuenta</span>
+				<input type="email" name="email" placeholder="Correo" />
+				<input type="password" name="password" placeholder="Contraseña" />
+				<a href="#">Olvidaste tu contraseña?</a>
+				<button>Iniciar sesion</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Bienvenido de nuevo!</h1>
+					<p>Contacta a soporte para más información</p>
+					<button class="ghost" id="signIn">Iniciar sesion</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Hola somos GIOVE</h1>
+					<p>Introduce tus datos personales y comienza tu viaje con nosotros.</p>
+					<button class="ghost" id="signUp">Registrate</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
-
-     
-    </body>
+	<script defer type="module" src="assets/js/usuario.js"></script>
+</body>
 </html>

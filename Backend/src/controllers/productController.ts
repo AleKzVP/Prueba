@@ -29,19 +29,28 @@ app.post('/controller/products', (req:any, res:any) => {
   });
 
   app.post('/controller/registro', (req:any, res:any) => {
-    dbUsuarios.load()
-    let usuarioRegistrado = {...req.body}
-    let secretKey = process.env.SECRET_KEY
-    usuarioRegistrado.name = Codificar(secretKey,usuarioRegistrado.name)
-    usuarioRegistrado.password = Codificar(secretKey,usuarioRegistrado.password)
-    usuarioRegistrado.email = Codificar(secretKey,usuarioRegistrado.email)
-    console.log(usuarioRegistrado)
-    console.log(Decodificar(secretKey,usuarioRegistrado.name))
-    dbUsuarios.data.push(usuarioRegistrado)
-    res.json({
-      estadoUsuario:"Usuario agregado"
-    })
-    dbUsuarios.save() 
+console.log("testeando request", req.body)
+    try {
+  dbUsuarios.load()
+  let usuarioRegistrado = {...req.body}
+  let secretKey = process.env.SECRET_KEY
+  usuarioRegistrado.name = Codificar(secretKey,usuarioRegistrado.name)
+  usuarioRegistrado.password = Codificar(secretKey,usuarioRegistrado.password)
+  usuarioRegistrado.email = Codificar(secretKey,usuarioRegistrado.email)
+  console.log(usuarioRegistrado)
+  console.log(Decodificar(secretKey,usuarioRegistrado.name))
+  dbUsuarios.data.push(usuarioRegistrado)
+  res.json({
+    estadoUsuario:"Usuario agregado",
+    status: true
+  })
+  dbUsuarios.save() 
+} catch (error) {
+  res.json({
+    estadoUsuario:"Usuario no agregado",
+    status: false
+  })
+}
   });
 
   app.post('/controller/uploadProducts', upload.single('image'), (req:any, res:any) => {
@@ -64,7 +73,6 @@ app.post('/controller/products', (req:any, res:any) => {
   })
 
   app.post('/controller/login', (req:any, res:any) => {
-    console.log("DATOS DEL LOGIN ",req.body)
     dbUsuarios.load()
     let secretKey = process.env.SECRET_KEY
     let usuarioLogin = {...req.body}
@@ -84,9 +92,11 @@ app.post('/controller/products', (req:any, res:any) => {
       })
     }
     else {
+      const admin = usuarioLoger.Admin?true:false
       res.json({
         estadoUsuario: "Se ha logueado con éxito",
-        status: true
+        status: true,
+        admin
       })
     }
   });

@@ -1,6 +1,6 @@
 import fetchObjForm from "../libs/fetchObjForm.js";
 import fetchPost from "../libs/fetchPost.js";
-import itemFunction from "./components/itemFunction.js";
+import itemFunction from "./components/itemFun.js";
 import itemNew from "./components/itemNew.js";
 async function main() {    
     const elementTable = document.getElementById("TableItems");

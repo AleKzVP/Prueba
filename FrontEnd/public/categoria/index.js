@@ -2,6 +2,9 @@ import productElement from "../components/product.js"
 import fetchPost from "../libs/fetchPost.js"
 async function categoria(){
     let genero = window.location.hash.slice(1);
+    if (genero == "femenino"){
+        document.getElementById("titulo").innerHTML="D A M A"
+    }
     console.log(genero);
     const callDat = {
         endPoint:"/controller/products", 

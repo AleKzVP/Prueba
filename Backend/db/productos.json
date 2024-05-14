@@ -1,1 +1,20 @@
-[{"nombre":"212 VIP BLACK","precio":"170.000","cantidad":"10","genero":"Masculino","tamaÃ±o":"120ml","categoria":"navidad","image":"uploads/image-1715400369227.PNG"}]
+[
+    {
+        "nombre": "212 VIP BLACK",
+        "precio": "170.000",
+        "cantidad": "10",
+        "genero": "Masculino",
+        "tamaÃ±o": "120ml",
+        "categoria": "navidad",
+        "image": "uploads/image-1715400369227.PNG"
+    },
+    {
+        "ID": "2",
+        "nombre": "Versace Yellow Diamond",
+        "precio": "140.000",
+        "cantidad": "5",
+        "categoria": "halloween",
+        "genero": "femenino",
+        "image": "uploads/image-1715663197911.jpg"
+    }
+]
