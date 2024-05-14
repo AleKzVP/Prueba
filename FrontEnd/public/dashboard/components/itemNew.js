@@ -45,6 +45,7 @@ export default function itemNew({
     MyEvents.editar().parentNode.appendChild(clonElementToFile);
     MyEvents.editar().innerHTML = "Guardar";
     MyEvents.eliminar().innerHTML = "Cancelar";
+    // Eliminar el elemento
     MyEvents.eliminar().addEventListener("click", ()=>nuevoElemento.remove());
     MyEvents.editar().addEventListener("click", ()=>{
         if (selectFile!==null) {
