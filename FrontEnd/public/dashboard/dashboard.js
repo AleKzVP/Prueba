@@ -1,3 +1,4 @@
+import fetchObjForm from "../libs/fetchObjForm.js";
 import itemFunction from "./components/itemFunction.js";
 import itemNew from "./components/itemNew.js";
 function main() {
@@ -31,20 +32,16 @@ function main() {
     buttonAddProduct.addEventListener("click", ()=>{
         itemNew({
             elementTable,
-            onEdit:(data)=>{
-                let clone = {...obj_Element};
-                clone.nombre = data.Nombre;
-                clone.precio = data.Precio;
-                clone.cantidad = data.Cantidad;
-                clone.categoria = data.Categoría;
-                clone.ID = data.ID;
+            onEdit:async (data)=>{
+                let clone = {...obj_Element, ...data};
+                console.log(clone);
                 ELEMENTS.push(()=>clone);
                 itemFunction(clone);
+                let response = await fetchObjForm({ObjectSend:data, endPoint:"/controller/uploadProducts"});
+                console.log(response);
             },
             ID:ELEMENTS.length+1,
         });
     })
 }
 main();
-
-

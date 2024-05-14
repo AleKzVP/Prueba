@@ -8,7 +8,7 @@ export default function itemFunction({
         categoria="blue", 
         onSave=()=>{},
         onDelete=()=>{},
-        columns=["ID", "Nombre", "Precio", "Cantidad", "Categoría", "Acción"]
+        columns=["ID", "nombre", "precio", "cantidad", "categoría", "acción"],
     }) {
     let MyEvents = {
         editar:e=>MyEvents.editar=(onClick)=>{

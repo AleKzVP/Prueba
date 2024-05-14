@@ -3,7 +3,7 @@ export default function itemNew({
     elementTable, 
     onEdit=()=>{},
     ID=0,
-    columns=["ID", "Nombre", "Precio", "Cantidad", "Categoría", "Acción"],
+    columns=["ID", "nombre", "precio", "cantidad", "categoria", "acción"],
 }) {
     const nuevoElemento = document.createElement("tr");
     let MyEvents = {
@@ -31,19 +31,34 @@ export default function itemNew({
         }
     }, "input")
     let clonElementToFile = MyEvents.editar().cloneNode(true);
+    let selectFile = null;
     clonElementToFile.innerHTML = "Imagen";
+    clonElementToFile.addEventListener("click", ()=>{
+        let input = document.createElement("input");
+        input.type = "file";
+        input.accept = "image/*";
+        input.addEventListener("change", (e)=>{
+            selectFile = e.target.files[0];
+        })
+        input.click();
+    })
     MyEvents.editar().parentNode.appendChild(clonElementToFile);
     MyEvents.editar().innerHTML = "Guardar";
     MyEvents.eliminar().innerHTML = "Cancelar";
     MyEvents.editar().addEventListener("click", ()=>{
-        let CloneElement = [...columns];
-        let data = {};
-        MyEvents.getId((element)=>{
-            data[CloneElement.shift()] = element.value;
-            element.value = "";
-        }, "input")
-        onEdit(data);
-        nuevoElemento.remove();
+        if (selectFile!==null) {
+            let CloneElement = [...columns];
+            let data = {};
+            MyEvents.getId((element)=>{
+                data[CloneElement.shift()] = element.value;
+                element.value = "";
+            }, "input")
+            data["image"] = selectFile;
+            onEdit(data);
+            nuevoElemento.remove();
+        }else{
+            alert("Seleccione una imagen");
+        }
     })
     return nuevoElemento;
 }
