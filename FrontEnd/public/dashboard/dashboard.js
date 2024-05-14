@@ -34,18 +34,7 @@ async function main() {
     })
     
     buttonAddProduct.addEventListener("click", ()=>{
-        let newID;
-        // Carga de elementos
-        for (let i = 1; i < ELEMENTS.length + 1; i++) {
-            if (i < ELEMENTS.length) {
-                if (ELEMENTS[i]().ID != i) {
-                    newID = i;
-                    break;
-                }
-            }else{
-                newID = ELEMENTS.length + 1;
-            }
-        }
+        const newID = getNewID(ELEMENTS);
         // arreglo
         itemNew({
             elementTable,
@@ -62,3 +51,20 @@ async function main() {
     })
 }
 main();
+
+
+
+function getNewID(elementFunctions) {
+    // Crear un conjunto con los IDs existentes
+    const existingIds = new Set();
+    elementFunctions.forEach(func => {
+      const element = func();
+      if (element.hasOwnProperty('ID')) {
+        existingIds.add(element.ID);
+      }
+    });  
+    // Encontrar el primer ID faltante
+    let newId = 1;
+    while (existingIds.has(newId)) {newId++;}
+    return newId;
+  }
