@@ -18,14 +18,12 @@ export default function itemNew({
         if (SID==0) {
             SID++;
             element.innerHTML = ID;
-        }else{
-            element.style.display = "none";
-        }
+        }else{}
+        element.style.display = "none";
     }, "span")
     MyEvents.getId((element)=>{
-        if (SID==0) {
-            element.style.display = "block";
-        }else{
+        element.style.display = "block";
+        if (SID==0) {}else{
             SID--;
             element.value=ID;
         }
