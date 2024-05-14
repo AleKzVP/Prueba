@@ -22,7 +22,7 @@ async function main() {
         },
     }
     let ELEMENTS =[]
-    Products.forEach((element)=>{
+    Products.forEach((element, index)=>{
         let cloneObject = {...obj_Element, ...element};
         ELEMENTS.push(()=>cloneObject);
     })
