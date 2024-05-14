@@ -34,6 +34,17 @@ async function main() {
     })
     
     buttonAddProduct.addEventListener("click", ()=>{
+        let newID;
+        for (let i = 1; i < ELEMENTS.length + 1; i++) {
+            if (i < ELEMENTS.length) {
+                if (ELEMENTS[i]().ID != i) {
+                    newID = i;
+                    break;
+                }
+            }else{
+                newID = i;
+            }
+        }
         itemNew({
             elementTable,
             onEdit:async (data)=>{
@@ -44,7 +55,7 @@ async function main() {
                 let response = await fetchObjForm({ObjectSend:data, endPoint:"/controller/uploadProducts"});
                 console.log(response);
             },
-            ID:ELEMENTS.length+1,
+            ID:newID,
         });
     })
 }
