@@ -27,6 +27,7 @@ export default function itemNew({
             SID--;
             element.value=ID;
         }
+        //arreglo 2
         // temporal
     }, "input")
     let clonElementToFile = MyEvents.editar().cloneNode(true);
