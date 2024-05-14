@@ -64,6 +64,7 @@ function getNewID(elementFunctions) {
       }
     });  
     // Encontrar el primer ID faltante
+    // Arreglo envio
     let newId = 1;
     while (existingIds.has(newId)) {newId++;}
     return newId;
