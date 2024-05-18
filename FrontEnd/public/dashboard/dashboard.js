@@ -16,6 +16,7 @@ async function main() {
         categoria:"blue",
         onSave:(data)=>{
             console.log(data);
+            fetchPost({data,endPoint:'/controller/editProducts'})
         },
         onDelete:(data)=>{
             console.log(data, "= delete element");

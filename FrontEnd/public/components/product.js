@@ -1,6 +1,7 @@
 // http://localhost:3000/controller/products
 const urlDefault = "assets/images/products/giove-perfume3.jpg";
 export default function product({
+    ID = "null",
     image = "/assets/images/products/giove-perfume3.jpg",
     nombre = "nothing",
     precio = "0.000",
@@ -8,7 +9,7 @@ export default function product({
     categoria = "nothing",
     genero = "nothing",
     tamaño = "nothing",
-}){
+},index){
     image = image.replaceAll(" ", "")==""?urlDefault:image;
     return `
         <div class="col-lg-3 col-md-6 col-12">
@@ -16,7 +17,7 @@ export default function product({
                 <div class="product-image">
                     <img src="/${image}" alt="#">
                     <div class="button">
-                        <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart </a>
+                        <a index='${JSON.stringify({index,ID,nombre,precio,cantidad,image})}' class="btn btnBuy"><i class="lni lni-cart"></i> Add to Cart </a>
                     </div>
                 </div>
                 <div class="product-info">
