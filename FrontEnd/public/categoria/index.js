@@ -39,6 +39,10 @@ async function categoria(){
                 manageLocalStorage("edit", "usuario",user)
             })
         });
+
+        const LoginBtn = document.getElementById("ButtonIniciarSesion");
+        LoginBtn.innerHTML = keyUser;
+        LoginBtn.href = "/";
     }else{
         [...document.getElementsByClassName("btnBuy")].forEach(element => {
             element.addEventListener("click",() => {

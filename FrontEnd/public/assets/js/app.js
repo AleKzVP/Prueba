@@ -10,6 +10,7 @@ if (user!==null) {
             manageLocalStorage("edit", "usuario",user)
         }});
     });
-}else{
-    document.getElementById("ButtonIniciarSesion").style = "display:none;"
+    const LoginBtn = document.getElementById("ButtonIniciarSesion");
+    LoginBtn.innerHTML = keyUser;
+    LoginBtn.href = "/";
 }
