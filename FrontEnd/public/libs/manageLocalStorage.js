@@ -25,7 +25,7 @@ export default function manageLocalStorage(action, key, value) {
             localStorage.setItem(key, JSON.stringify(value));
             console.log(`Inserted: ${key} - ${JSON.stringify(value)}`);
             break;
-
+            
         case 'delete':
             // Elimina un elemento de localStorage
             if (localStorage.getItem(key) !== null) {
