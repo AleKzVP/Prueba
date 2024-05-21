@@ -38,6 +38,4 @@ Author: GrayGrids
     navbarToggler.addEventListener('click', function () {
         navbarToggler.classList.toggle("active");
     });
-
-  
 })();

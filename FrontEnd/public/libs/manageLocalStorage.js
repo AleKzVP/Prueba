@@ -32,7 +32,7 @@ export default function manageLocalStorage(action, key, value) {
                 localStorage.removeItem(key);
                 console.log(`Deleted: ${key}`);
             } else {
-                return [];
+                return null;
             }
             break;
 
@@ -47,7 +47,7 @@ export default function manageLocalStorage(action, key, value) {
                 localStorage.setItem(key, JSON.stringify(value));
                 console.log(`Edited: ${key} - ${JSON.stringify(value)}`);
             } else {
-                return [];
+                return null;
             }
             break;
 
@@ -59,7 +59,7 @@ export default function manageLocalStorage(action, key, value) {
                 console.log(`Value of ${key}:`, parsedValue);
                 return parsedValue;
             } else {
-                return [];
+                return null;
             }
             break;
 
