@@ -2,13 +2,11 @@ import manageLocalStorage from "../libs/manageLocalStorage.js";
 import carrito from "../components/carrito.js";
 import productElement from "../components/product.js"
 import fetchPost from "../libs/fetchPost.js"
-// console.log(manageLocalStorage("get","usuario",null))
 async function categoria(){
     let genero = window.location.hash.slice(1);
     if (genero == "femenino"){
         document.getElementById("titulo").innerHTML="D A M A"
     }
-    // console.log(genero);
     const callDat = {
         endPoint:"/controller/products", 
         data:{genero},
@@ -36,4 +34,3 @@ async function categoria(){
     });
 }
 categoria()
-// car1.removeItem(1);
