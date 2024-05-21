@@ -63,7 +63,7 @@ function item({image, title, price, id, href}) {
             <i class="lni lni-close"></i>
         </a>
         <div class="cart-img-head">
-            <a class="cart-img" href="${href}"> <img src="${image}" alt="#"/> </a>
+            <a class="cart-img" href="${href}"> <img src="/${image}" alt="#"/> </a>
         </div>
         <div class="content">
             <h4> <a href="#">${title}</a> </h4>
