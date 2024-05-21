@@ -1,6 +1,7 @@
 import manageLocalStorage from "../libs/manageLocalStorage.js";
 function Main() {
     const user = manageLocalStorage("get", "usuario", null)
+    if(user==null){ alert("Debe iniciar sesión para poder comprar"); window.location.href = '/usuario.html';}
     const Products = user[user.data.email];
     document.getElementById("name").value = user.data.name;
     document.getElementById("email").value = user.data.email;
