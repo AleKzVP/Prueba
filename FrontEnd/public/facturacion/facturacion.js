@@ -20,5 +20,26 @@ function Main() {
     document.getElementById("precio").value = TotalPrice;
     console.log(user.data);
     console.log(Products);
+    document.getElementById("GenerarFactura").addEventListener("click", () => {
+        captura();
+    });
 }
 Main()
+
+
+function captura() {
+    var element = document.getElementById('faturacionContainer');
+    html2canvas(element).then(function(canvas) {
+        // Convertir el lienzo a una URL de imagen en formato PNG
+        var imgData = canvas.toDataURL('image/png');
+        
+        // Crear un enlace para descargar la imagen
+        var link = document.createElement('a');
+        link.style.display = 'none';
+        link.href = imgData;
+        link.download = 'captura.png';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+}
