@@ -43,7 +43,9 @@ async function categoria(){
         const LoginBtn = document.getElementById("ButtonIniciarSesion");
         LoginBtn.innerHTML = keyUser;
         LoginBtn.href = "/";
+        document.getElementById("ButtonLogOut").style.display = "block";
     }else{
+        document.getElementById("ButtonLogOut").style.display = "none";
         [...document.getElementsByClassName("btnBuy")].forEach(element => {
             element.addEventListener("click",() => {
                 alert("Debe iniciar sesion para poder comprar")

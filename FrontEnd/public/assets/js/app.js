@@ -13,4 +13,7 @@ if (user!==null) {
     const LoginBtn = document.getElementById("ButtonIniciarSesion");
     LoginBtn.innerHTML = keyUser;
     LoginBtn.href = "/";
+    document.getElementById("ButtonLogOut").style.display = "block";
+}else{
+    document.getElementById("ButtonLogOut").style.display = "none";
 }
