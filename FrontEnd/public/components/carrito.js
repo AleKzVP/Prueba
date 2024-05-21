@@ -23,7 +23,7 @@ export default function carrito({parent, name}) {
                         <span class="total-amount" id="${this.id}_price">$0</span>
                     </div>
                     <div class="button">
-                        <a href="checkout.html" class="btn animate">Checkout</a>
+                        <a href="/facturacion/facturacion.html" class="btn animate">Comprar</a>
                     </div>
                 </div>
             </div>
