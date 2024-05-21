@@ -1,4 +1,8 @@
 import item from "./items.js";
+let randomId = new function () {
+    let caheId = []
+    
+}
 export default function itemNew({
     elementTable, 
     onEdit=()=>{},

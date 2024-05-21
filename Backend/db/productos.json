@@ -20,9 +20,9 @@
     {
         "ID": "3",
         "nombre": "212 VIP BLACK",
-        "precio": "140.000",
-        "cantidad": "2",
-        "categoria": "halloween",
+        "precio": "200.000",
+        "cantidad": "100",
+        "categoria": "navidad",
         "genero": "masculino",
         "image": "uploads/image-1715668596062.jpeg"
     }

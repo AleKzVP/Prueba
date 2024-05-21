@@ -1,3 +1,4 @@
+import manageLocalStorage from "../../libs/manageLocalStorage.js";
 import fetchPost from "../../libs/fetchPost.js" 
 
 const signUpButton = document.getElementById('signUp');
@@ -21,6 +22,8 @@ document.getElementById('formularioLogin').addEventListener('submit', async func
 			window.location.href = '/dashboard';
 		
 		} else {
+			const almacen = {[getFormData("formularioLogin").email]:[]}
+			manageLocalStorage("insert","usuario",almacen)
 			window.location.href = '/'
 		}
 	} else {
