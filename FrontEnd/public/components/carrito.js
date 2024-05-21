@@ -33,9 +33,10 @@ export default function carrito({parent, name}) {
     const total_items = this.CarElement.querySelector(`#${this.id}_total-items`);
     const list_items = this.CarElement.querySelector(`#${this.id}_list_items`);
     parent.appendChild(this.CarElement); 
-    this.addItem =({image, title, price, id, href})=>{
+    this.addItem =({image, title, price, id, href, onRemove})=>{
         const properties = {image, title, price, id, href, onRemove: (element, id) => {
             element.addEventListener("click", () => {
+                onRemove(element, id);
                 this.removeItem(id);
             });
         }};
@@ -55,6 +56,9 @@ export default function carrito({parent, name}) {
             list_items.removeChild(lista_items[index].element);
             lista_items.splice(index, 1);
             total_items.innerHTML = lista_items.length;
+            total_items.innerHTML = lista_items.length;
+            title_items.innerHTML = `${lista_items.length} Items`;
+            element_price.innerHTML = `$${lista_items.reduce((acc, item) => acc + Number(item.properties.price), 0)}`;
         }
     }
 }
