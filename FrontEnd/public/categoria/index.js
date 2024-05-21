@@ -19,24 +19,34 @@ async function categoria(){
     });
     const car1 = new carrito({parent:document.getElementById("navBar"), name: "Carrito"});
     const user = manageLocalStorage("get", "usuario",null)
-    const keyUser = Object.keys(user)[0]
-    user[keyUser].forEach(element => {
-        car1.addItem({image:element.image, title:element.nombre, price: element.precio, id: element.ID, href:"", onRemove:()=>{
-            user[keyUser].splice(user[keyUser].indexOf(element),1)
-            manageLocalStorage("edit", "usuario",user)
-        }});
-    });
+    if(Object.keys(user) > 0){
+        const keyUser = Object.keys(user)[0]
+        user[keyUser].forEach(element => {
+            car1.addItem({image:element.image, title:element.nombre, price: element.precio, id: element.ID, href:"", onRemove:()=>{
+                user[keyUser].splice(user[keyUser].indexOf(element),1)
+                manageLocalStorage("edit", "usuario",user)
+            }});
+        });
+        
+        [...document.getElementsByClassName("btnBuy")].forEach(element => {
+            element.addEventListener("click",() => {
+                const producto = JSON.parse(element.getAttribute("index"))
+                user[keyUser].push(producto)
+                car1.addItem({image:producto.image, title:producto.nombre, price: producto.precio, id: producto.ID, href:"", onRemove:()=>{
+                    user[keyUser].splice(user[keyUser].indexOf(producto),1)
+                    manageLocalStorage("edit", "usuario",user)
+                }});
+                manageLocalStorage("edit", "usuario",user)
+            })
+        });
+    }else{
+        [...document.getElementsByClassName("btnBuy")].forEach(element => {
+            element.addEventListener("click",() => {
+                alert("Debe iniciar sesion para poder comprar")
+                window.location.href = '/usuario.html';
+            })
+        });
+    }
     
-    [...document.getElementsByClassName("btnBuy")].forEach(element => {
-      element.addEventListener("click",() => {
-        const producto = JSON.parse(element.getAttribute("index"))
-        user[keyUser].push(producto)
-        car1.addItem({image:producto.image, title:producto.nombre, price: producto.precio, id: producto.ID, href:"", onRemove:()=>{
-            user[keyUser].splice(user[keyUser].indexOf(producto),1)
-            manageLocalStorage("edit", "usuario",user)
-        }});
-        manageLocalStorage("edit", "usuario",user)
-      })
-    });
 }
 categoria()
