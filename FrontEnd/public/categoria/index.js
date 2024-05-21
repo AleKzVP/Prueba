@@ -3,6 +3,7 @@ import carrito from "../components/carrito.js";
 import productElement from "../components/product.js"
 import fetchPost from "../libs/fetchPost.js"
 async function categoria(){
+    const logOUT = document.getElementById("ButtonLogOut");
     let genero = window.location.hash.slice(1);
     if (genero == "femenino"){
         document.getElementById("titulo").innerHTML="D A M A"
@@ -43,9 +44,13 @@ async function categoria(){
         const LoginBtn = document.getElementById("ButtonIniciarSesion");
         LoginBtn.innerHTML = keyUser;
         LoginBtn.href = "/";
-        document.getElementById("ButtonLogOut").style.display = "block";
+        logOUT.style.display = "block";
+        logOUT.addEventListener("click",()=>{
+            manageLocalStorage("delete", "usuario",null)
+            logOUT.style.display = "none";
+            LoginBtn.innerHTML = "INICIAR SESIÓN";
+        })
     }else{
-        document.getElementById("ButtonLogOut").style.display = "none";
         [...document.getElementsByClassName("btnBuy")].forEach(element => {
             element.addEventListener("click",() => {
                 alert("Debe iniciar sesion para poder comprar")

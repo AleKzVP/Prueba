@@ -2,6 +2,8 @@ import carrito from "../../components/carrito.js";
 import manageLocalStorage from "../../libs/manageLocalStorage.js";
 const car1 = new carrito({parent:document.getElementById("navBar"), name: "Carrito"});
 const user = manageLocalStorage("get", "usuario",null)
+const LoginBtn = document.getElementById("ButtonIniciarSesion");
+const logOUT = document.getElementById("ButtonLogOut");
 if (user!==null) {
     const keyUser = Object.keys(user)[0]
     user[keyUser].forEach(element => {
@@ -10,10 +12,12 @@ if (user!==null) {
             manageLocalStorage("edit", "usuario",user)
         }});
     });
-    const LoginBtn = document.getElementById("ButtonIniciarSesion");
     LoginBtn.innerHTML = keyUser;
     LoginBtn.href = "/";
-    document.getElementById("ButtonLogOut").style.display = "block";
-}else{
-    document.getElementById("ButtonLogOut").style.display = "none";
+    logOUT.style.display = "block";
+    logOUT.addEventListener("click",()=>{
+        manageLocalStorage("delete", "usuario",null)
+        logOUT.style.display = "none";
+        LoginBtn.innerHTML = "INICIAR SESIÓN";
+    })
 }
