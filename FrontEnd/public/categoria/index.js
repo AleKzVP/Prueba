@@ -47,6 +47,7 @@ async function categoria(){
         logOUT.style.display = "block";
         logOUT.addEventListener("click",()=>{
             manageLocalStorage("delete", "usuario",null)
+            window.location.href = '/';
             logOUT.style.display = "none";
             LoginBtn.innerHTML = "INICIAR SESIÓN";
         })
