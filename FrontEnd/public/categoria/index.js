@@ -4,9 +4,18 @@ import productElement from "../components/product.js"
 import fetchPost from "../libs/fetchPost.js"
 async function categoria(){
     const logOUT = document.getElementById("ButtonLogOut");
+    const description = document.getElementById("description")
     let genero = window.location.hash.slice(1);
     if (genero == "femenino"){
         document.getElementById("titulo").innerHTML="D A M A"
+        description.innerHTML = `
+            La moda femenina es un mundo de posibilidades, 
+            donde cada mujer puede encontrar su estilo y personalidad. 
+            En nuestra tienda online de ropa de mujer, podrás encontrar 
+            las últimas tendencias en moda femenina, con una amplia variedad 
+            de prendas de ropa de mujer para que puedas elegir la que más 
+            te guste. Descubre nuestra colección de ropa de mujer y encuentra 
+            la prenda perfecta para cada ocasión.`
     }
     const callDat = {
         endPoint:"/controller/products", 
