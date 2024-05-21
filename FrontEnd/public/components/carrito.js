@@ -34,7 +34,11 @@ export default function carrito({parent, name}) {
     const list_items = this.CarElement.querySelector(`#${this.id}_list_items`);
     parent.appendChild(this.CarElement); 
     this.addItem =({image, title, price, id, href})=>{
-        const properties = {image, title, price, id, href};
+        const properties = {image, title, price, id, href, onRemove: (element, id) => {
+            element.addEventListener("click", () => {
+                this.removeItem(id);
+            });
+        }};
         const element = item(properties);
         lista_items.push({element, properties});
         list_items.appendChild(element);
@@ -55,12 +59,14 @@ export default function carrito({parent, name}) {
     }
 }
 
-function item({image, title, price, id, href}) {
+function item({image, title, price, id, href, onRemove}) {
+    const randomIdNum = Math.floor(Math.random() * 1000);
+    const ElementItem_ID = `item_${randomIdNum}_${id}`
     const element = document.createElement("li");
     element.id = id;
     element.innerHTML = `
         <a class="remove" title="Remove this item">
-            <i class="lni lni-close"></i>
+            <i class="lni lni-close" id=${ElementItem_ID}></i>
         </a>
         <div class="cart-img-head">
             <a class="cart-img" href="${href}"> <img src="/${image}" alt="#"/> </a>
@@ -70,5 +76,7 @@ function item({image, title, price, id, href}) {
             <p class="quantity">1x - <span class="amount">${price}</span></p>
         </div>
     `
+    const remove = element.querySelector(`#${ElementItem_ID}`);
+    onRemove(remove, id);
     return element;
 }
