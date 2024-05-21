@@ -1,9 +1,9 @@
-function Codificar(contraseña:any, dato:any) {
+function Codificar(contraseña, dato) {
     const cadenaAEncriptar = dato + ':' + contraseña;
     const datosCodificados = btoa(cadenaAEncriptar);
     return datosCodificados;
 }
-function Decodificar(contraseña:any, datosCodificados:any) {
+function Decodificar(contraseña, datosCodificados) {
     const cadenaCodificada = atob(datosCodificados);
     const partes = cadenaCodificada.split(':');
     

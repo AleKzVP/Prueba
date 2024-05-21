@@ -1,17 +1,15 @@
-import { response } from "express";
-import db from "../../db/db";
 import dotenv, { decrypt } from 'dotenv';
-import { Codificar,Decodificar } from "./encriptacion";
-import upload from "../../../uploads/upload";
+import { Codificar,Decodificar } from "./encriptacion.js";
+import upload from "../../../uploads/upload.js";
 dotenv.config();
-export default function productController(app:any,dbProductos:db, dbUsuarios:db):void {
+export default function productController(app,dbProductos, dbUsuarios) {
 
     // Manejador de ruta raíz
 //primer parámetro hace referencia a una url del navegador ('/test')
 
-app.post('/controller/editProducts', (req:any, res:any) => {
+app.post('/controller/editProducts', (req, res) => {
   dbProductos.load()
-  let productos: Array<any>= [] = dbProductos.data
+  let productos = dbProductos.data
    for (let i = 0; i < productos.length; i++) {
 
     if (productos[i].ID==req.body.ID) {
@@ -25,10 +23,10 @@ app.post('/controller/editProducts', (req:any, res:any) => {
   
 })
 
-app.post('/controller/deleteProducts', (req:any, res:any) => {
+app.post('/controller/deleteProducts', (req, res) => {
   dbProductos.load()
-  let productos: Array<any>= [] = dbProductos.data
-  productos = productos.filter((producto:any)=>{
+  let productos = dbProductos.data
+  productos = productos.filter((producto)=>{
     if (producto.ID) {
       return String(producto.ID)!==String (req.body.ID)
     }
@@ -37,12 +35,12 @@ app.post('/controller/deleteProducts', (req:any, res:any) => {
   dbProductos.save() 
   
 })
-app.post('/controller/products', (req:any, res:any) => {
+app.post('/controller/products', (req, res) => {
     dbProductos.load()
-    let productos: Array<any>= [] = dbProductos.data
+    let productos = dbProductos.data
     let filtro;
     if (req.body.genero!=undefined) {  
-      filtro = productos.filter((producto:any)=>{
+      filtro = productos.filter((producto)=>{
         if (producto.genero) {
           return producto.genero.toLowerCase()==req.body.genero.toLowerCase()
         }
@@ -50,14 +48,14 @@ app.post('/controller/products', (req:any, res:any) => {
       res.json(filtro); return;
     }
     if (req.body.requiero!=undefined) {
-      filtro = productos.filter((producto:any)=>{return producto.categoría==req.body.requiero})
+      filtro = productos.filter((producto)=>{return producto.categoría==req.body.requiero})
       res.json(filtro); return;
     }
     filtro = productos;
     res.json(filtro)
   });
 
-  app.post('/controller/registro', (req:any, res:any) => {
+  app.post('/controller/registro', (req, res) => {
 console.log("testeando request", req.body)
     try {
   dbUsuarios.load()
@@ -82,7 +80,7 @@ console.log("testeando request", req.body)
 }
   });
 
-  app.post('/controller/uploadProducts', upload.single('image'), (req:any, res:any) => {
+  app.post('/controller/uploadProducts', upload.single('image'), (req, res) => {
     dbProductos.load()
     if (!req.file) {
       return res.status(400).send('No se proporcionó ninguna imagen');
@@ -101,7 +99,7 @@ console.log("testeando request", req.body)
 
   })
 
-  app.post('/controller/login', (req:any, res:any) => {
+  app.post('/controller/login', (req, res) => {
     dbUsuarios.load()
     let secretKey = process.env.SECRET_KEY
     let usuarioLogin = {...req.body}

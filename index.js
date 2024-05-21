@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
-import productController from './Backend/src/controllers/productController';
-import db from "./Backend/db/db"
+import productController from './Backend/src/controllers/productController.js';
+import db from "./Backend/db/db.js"
 let dbProductos = new db("./Backend/db/productos.json")
 let dbUsuarios = new db("./Backend/db/usuarios.json")
 const app = express();
