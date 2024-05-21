@@ -123,7 +123,8 @@ console.log("testeando request", req.body)
       res.json({
         estadoUsuario: "Se ha logueado con éxito",
         status: true,
-        admin
+        admin,
+        data: {name: Decodificar(secretKey, usuarioLoger.name), email: Decodificar(secretKey, usuarioLoger.email)}
       })
     }
   });

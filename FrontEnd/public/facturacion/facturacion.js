@@ -1,41 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetchProductos();
-});
-
-function fetchProductos() {
-    fetch('http://localhost:3000/api/products')
-        .then(response => response.json())
-        .then(data => {
-            const productoSelect = document.getElementById('producto');
-            data.forEach(producto => {
-                const option = document.createElement('option');
-                option.value = producto.name;
-                option.textContent = producto.name;
-                productoSelect.appendChild(option);
-            });
-        })
-        .catch(error => console.error('Error fetching productos:', error));
+import manageLocalStorage from "../libs/manageLocalStorage.js";
+function Main() {
+    const user = manageLocalStorage("get", "usuario", null)
+    const Products = user[user.data.email];
+    document.getElementById("name").value = user.data.name;
+    document.getElementById("email").value = user.data.email;
+    let TotalPrice = 0;
+    let TotalCantidad = 0;
+    Products.forEach(product => {
+        const elementProduct = document.createElement("ul");
+        elementProduct.value = product.ID;
+        elementProduct.innerHTML = `${product.nombre} - ${product.cantidad} - $${product.precio}`;
+        elementProduct.classList.add("list-group-item");
+        document.getElementById("producto").appendChild(elementProduct);
+        TotalPrice += Number(product.precio) * Number(product.cantidad);
+        TotalCantidad += Number(product.cantidad);
+    });
+    document.getElementById("producto").selectedIndex = 1;
+    document.getElementById("cantidad").value = TotalCantidad;
+    document.getElementById("precio").value = TotalPrice;
+    console.log(user.data);
+    console.log(Products);
 }
-
-function generarFactura() {
-    const nombre = document.getElementById('nombre').value;
-    const correo = document.getElementById('correo').value;
-    const direccion = document.getElementById('direccion').value;
-    const producto = document.getElementById('producto').value;
-    const cantidad = document.getElementById('cantidad').value;
-    const precio = document.getElementById('precio').value;
-    const total = (cantidad * precio).toFixed(2);
-
-    const detallesFactura = `
-        <p class="facturaItem"><strong>Nombre del Cliente:</strong> ${nombre}</p>
-        <p class="facturaItem"><strong>Correo Electrónico:</strong> ${correo}</p>
-        <p class="facturaItem"><strong>Dirección:</strong> ${direccion}</p>
-        <p class="facturaItem"><strong>Producto:</strong> ${producto}</p>
-        <p class="facturaItem"><strong>Cantidad:</strong> ${cantidad}</p>
-        <p class="facturaItem"><strong>Precio Unitario:</strong> $${precio}</p>
-        <p class="facturaItem"><strong>Total:</strong> $${total}</p>
-    `;
-
-    document.getElementById('detallesFactura').innerHTML = detallesFactura;
-    document.getElementById('factura').style.display = 'block';
-}
+Main()

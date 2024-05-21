@@ -22,7 +22,7 @@ document.getElementById('formularioLogin').addEventListener('submit', async func
 			window.location.href = '/dashboard';
 		
 		} else {
-			const almacen = {[getFormData("formularioLogin").email]:[]}
+			const almacen = {[getFormData("formularioLogin").email]:[], data:resultado.data}
 			manageLocalStorage("insert","usuario",almacen)
 			window.location.href = '/'
 		}
