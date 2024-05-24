@@ -44,12 +44,14 @@ async function categoria(){
         user[keyUser].forEach(element => {
             const key_name = element.nombre.trim();
             if (conteoProducto[key_name]) {conteoProducto[key_name]+=1} else {conteoProducto[key_name]=1}
-            car1.addItem({image:element.image, title:element.nombre, price: element.precio, id: element.ID, href:"", onRemove:()=>{
+            car1.addItem({image:element.image, title:element.nombre, price: element.precio, id: element.ID,cantidad: element.cantidad, href:"", onRemove:()=>{
                 const name_key = key_name;
                 user[keyUser].splice(user[keyUser].indexOf(element),1)
                 manageLocalStorage("edit", "usuario",user)
                 conteoProducto[name_key]-=1;
+                document.getElementById(`stock_${element.ID}`).innerHTML = `Stock ${conteoProducto[name_key]}/${element.cantidad}`
             }});
+            document.getElementById(`stock_${element.ID}`).innerHTML = `Stock ${conteoProducto[key_name]}/${element.cantidad}`
         });
         
         [...document.getElementsByClassName("btnBuy")].forEach(element => {
@@ -64,14 +66,16 @@ async function categoria(){
                     alert("No hay suficiente stock de este producto")
                 }else{
                     user[keyUser].push(producto)
-                    car1.addItem({image:producto.image, title:producto.nombre, price: producto.precio, id: producto.ID, href:"", onRemove:()=>{
+                    car1.addItem({image:producto.image, title:producto.nombre, price: producto.precio, id: producto.ID, cantidad: producto.cantidad, href:"", onRemove:()=>{
                         const name_key = key_name;
                         user[keyUser].splice(user[keyUser].indexOf(producto),1);
                         manageLocalStorage("edit", "usuario",user)
                         conteoProducto[name_key]-=1;
+                        document.getElementById(`stock_${producto.ID}`).innerHTML = `Stock ${conteoProducto[name_key]}/${producto.cantidad}`
                     }});
                     manageLocalStorage("edit", "usuario",user)
                     conteoProducto[key_name]+=1;
+                    document.getElementById(`stock_${producto.ID}`).innerHTML = `Stock ${conteoProducto[key_name]}/${producto.cantidad}`
                 }
             })
         });

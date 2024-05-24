@@ -32,6 +32,7 @@ export default function product({
                         <li><i class="lni lni-star-filled"></i></li>
                         <li><i class="lni lni-star"></i></li>
                         <li><span>4.0 Review(s)</span></li>
+                        <li id="stock_${ID}"><span>Stock 0/${cantidad}</span></li>
                     </ul>
                     <div class="price">
                         <span>${precio}</span>
