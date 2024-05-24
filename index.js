@@ -23,8 +23,8 @@ app.use("/uploads",express.static(uploadFolder));
 app.use(express.json()); // app.use(express.static('build'));
 productController(app,dbProductos,dbUsuarios)
 
-const PORT = 3080;
-const PORTssl = 3443;
+const PORT = 4080;
+const PORTssl = 4443;
 const privateKey = fs.readFileSync('./cert/private.key', 'utf8');
 const certificate = fs.readFileSync('./cert/certificate.crt', 'utf8');
 const certificateCA = fs.readFileSync('./cert/ca_bundle.crt', 'utf8');
