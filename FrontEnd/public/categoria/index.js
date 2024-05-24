@@ -33,11 +33,8 @@ async function categoria(){
     if(user!=null){
         const keyUser = Object.keys(user)[0]
         user[keyUser].forEach(element => {
-            if (conteoProducto[element.nombre]) {
-                conteoProducto[element.nombre]+=1
-            } else {
-                conteoProducto[element.nombre]=1
-            }
+            const key_name = element.nombre.trim();
+            if (conteoProducto[key_name]) {conteoProducto[key_name]+=1} else {conteoProducto[key_name]=1}
             car1.addItem({image:element.image, title:element.nombre, price: element.precio, id: element.ID, href:"", onRemove:()=>{
                 user[keyUser].splice(user[keyUser].indexOf(element),1)
                 manageLocalStorage("edit", "usuario",user)
@@ -46,17 +43,23 @@ async function categoria(){
         
         [...document.getElementsByClassName("btnBuy")].forEach(element => {
             element.addEventListener("click",() => {
-                const producto = JSON.parse(element.getAttribute("index"))
-                if (conteoProducto[producto.nombre]>3) {
-                    alert("se ha superado la cantidad de productos disponibles¿¿")
-                } else {
-
+                const producto = JSON.parse(element.getAttribute("index"));
+                const key_name = producto.nombre.trim();
+                if (!conteoProducto[key_name]) {conteoProducto[key_name]=0}
+                
+                // console.log(" ------> ", Number(conteoProducto[key_name]), " --> ", conteoProducto[key_name]);
+                // console.log(" ---> ", Number(producto.cantidad.trim()));
+                if (Number(conteoProducto[key_name]) >= Number(producto.cantidad.trim())) {
+                    alert("No hay suficiente stock de este producto")
+                }else{
                     user[keyUser].push(producto)
                     car1.addItem({image:producto.image, title:producto.nombre, price: producto.precio, id: producto.ID, href:"", onRemove:()=>{
-                        user[keyUser].splice(user[keyUser].indexOf(producto),1)
+                        user[keyUser].splice(user[keyUser].indexOf(producto),1);
                         manageLocalStorage("edit", "usuario",user)
                     }});
                     manageLocalStorage("edit", "usuario",user)
+                    conteoProducto[key_name]+=1;
+                    console.log(conteoProducto[key_name]);
                 }
             })
         });
@@ -74,7 +77,7 @@ async function categoria(){
     }else{
         [...document.getElementsByClassName("btnBuy")].forEach(element => {
             element.addEventListener("click",() => {
-                alert("Debe iniciar sesion para poder comprar")
+                alert("Debe iniciar sesión para poder comprar")
                 window.location.href = '/usuario.html';
             })
         });

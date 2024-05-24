@@ -23,7 +23,7 @@ export default function manageLocalStorage(action, key, value) {
             }
             // Inserta un nuevo elemento en localStorage
             localStorage.setItem(key, JSON.stringify(value));
-            console.log(`Inserted: ${key} - ${JSON.stringify(value)}`);
+            // console.log(`Inserted: ${key} - ${JSON.stringify(value)}`);
             break;
             
         case 'delete':
@@ -45,7 +45,7 @@ export default function manageLocalStorage(action, key, value) {
             // Edita un elemento existente en localStorage
             if (localStorage.getItem(key) !== null) {
                 localStorage.setItem(key, JSON.stringify(value));
-                console.log(`Edited: ${key} - ${JSON.stringify(value)}`);
+                // console.log(`Edited: ${key} - ${JSON.stringify(value)}`);
             } else {
                 return null;
             }
@@ -56,7 +56,7 @@ export default function manageLocalStorage(action, key, value) {
             const storedValue = localStorage.getItem(key);
             if (storedValue !== null) {
                 const parsedValue = JSON.parse(storedValue);
-                console.log(`Value of ${key}:`, parsedValue);
+                // console.log(`Value of ${key}:`, parsedValue);
                 return parsedValue;
             } else {
                 return null;

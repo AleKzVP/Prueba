@@ -30,5 +30,5 @@ const certificate = fs.readFileSync('./cert/certificate.crt', 'utf8');
 const certificateCA = fs.readFileSync('./cert/ca_bundle.crt', 'utf8');
 const serverHTTPS = https.createServer({ key: privateKey, cert: certificate, ca: certificateCA}, app);
 const serverHTTP = http.createServer(app);
-serverHTTPS.listen(PORTssl, () => {console.log(`Servidor HTTPS ${PORTssl}`);});
-serverHTTP.listen(PORT, () => {console.log(`Servidor HTTP ${PORT}`);});
+serverHTTPS.listen(PORTssl, () => {console.log(`Servidor HTTPS https://localhost:${PORTssl}`);});
+serverHTTP.listen(PORT, () => {console.log(`Servidor HTTP http://localhost:${PORT}`);});
