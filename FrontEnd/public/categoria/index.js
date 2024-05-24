@@ -23,6 +23,7 @@ async function categoria(){
     }
     const LoadElements = await fetchPost(callDat)
     const ElementList = document.getElementById("Products");
+    let conteoProducto = {};
     ElementList.innerHTML = "";
     LoadElements.forEach((element,index) => {
         ElementList.innerHTML += productElement(element,index);
@@ -32,6 +33,11 @@ async function categoria(){
     if(user!=null){
         const keyUser = Object.keys(user)[0]
         user[keyUser].forEach(element => {
+            if (conteoProducto[element.nombre]) {
+                conteoProducto[element.nombre]+=1
+            } else {
+                conteoProducto[element.nombre]=1
+            }
             car1.addItem({image:element.image, title:element.nombre, price: element.precio, id: element.ID, href:"", onRemove:()=>{
                 user[keyUser].splice(user[keyUser].indexOf(element),1)
                 manageLocalStorage("edit", "usuario",user)
@@ -41,12 +47,17 @@ async function categoria(){
         [...document.getElementsByClassName("btnBuy")].forEach(element => {
             element.addEventListener("click",() => {
                 const producto = JSON.parse(element.getAttribute("index"))
-                user[keyUser].push(producto)
-                car1.addItem({image:producto.image, title:producto.nombre, price: producto.precio, id: producto.ID, href:"", onRemove:()=>{
-                    user[keyUser].splice(user[keyUser].indexOf(producto),1)
+                if (conteoProducto[producto.nombre]>3) {
+                    alert("se ha superado la cantidad de productos disponibles¿¿")
+                } else {
+
+                    user[keyUser].push(producto)
+                    car1.addItem({image:producto.image, title:producto.nombre, price: producto.precio, id: producto.ID, href:"", onRemove:()=>{
+                        user[keyUser].splice(user[keyUser].indexOf(producto),1)
+                        manageLocalStorage("edit", "usuario",user)
+                    }});
                     manageLocalStorage("edit", "usuario",user)
-                }});
-                manageLocalStorage("edit", "usuario",user)
+                }
             })
         });
 

@@ -17,7 +17,6 @@ function Main() {
         TotalCantidad += Number(product.cantidad);
     });
     document.getElementById("producto").selectedIndex = 1;
-    document.getElementById("cantidad").value = TotalCantidad;
     document.getElementById("precio").value = TotalPrice;
     console.log(user.data);
     console.log(Products);
