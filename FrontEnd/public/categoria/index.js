@@ -60,7 +60,6 @@ async function categoria(){
                     }});
                     manageLocalStorage("edit", "usuario",user)
                     conteoProducto[key_name]+=1;
-                    console.log(conteoProducto[key_name]);
                 }
             })
         });
