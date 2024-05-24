@@ -36,8 +36,10 @@ async function categoria(){
             const key_name = element.nombre.trim();
             if (conteoProducto[key_name]) {conteoProducto[key_name]+=1} else {conteoProducto[key_name]=1}
             car1.addItem({image:element.image, title:element.nombre, price: element.precio, id: element.ID, href:"", onRemove:()=>{
+                const name_key = key_name;
                 user[keyUser].splice(user[keyUser].indexOf(element),1)
                 manageLocalStorage("edit", "usuario",user)
+                conteoProducto[name_key]-=1;
             }});
         });
         
@@ -46,16 +48,15 @@ async function categoria(){
                 const producto = JSON.parse(element.getAttribute("index"));
                 const key_name = producto.nombre.trim();
                 if (!conteoProducto[key_name]) {conteoProducto[key_name]=0}
-                
-                // console.log(" ------> ", Number(conteoProducto[key_name]), " --> ", conteoProducto[key_name]);
-                // console.log(" ---> ", Number(producto.cantidad.trim()));
                 if (Number(conteoProducto[key_name]) >= Number(producto.cantidad.trim())) {
                     alert("No hay suficiente stock de este producto")
                 }else{
                     user[keyUser].push(producto)
                     car1.addItem({image:producto.image, title:producto.nombre, price: producto.precio, id: producto.ID, href:"", onRemove:()=>{
+                        const name_key = key_name;
                         user[keyUser].splice(user[keyUser].indexOf(producto),1);
                         manageLocalStorage("edit", "usuario",user)
+                        conteoProducto[name_key]-=1;
                     }});
                     manageLocalStorage("edit", "usuario",user)
                     conteoProducto[key_name]+=1;
@@ -85,3 +86,4 @@ async function categoria(){
     
 }
 categoria()
+
