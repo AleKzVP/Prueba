@@ -20,6 +20,7 @@ app.post('/controller/editProducts', (req, res) => {
    }
   dbProductos.data=productos
   dbProductos.save() 
+  res.json({status:true})
   
 })
 

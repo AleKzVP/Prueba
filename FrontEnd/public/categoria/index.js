@@ -56,8 +56,11 @@ async function categoria(){
             element.addEventListener("click",() => {
                 const producto = JSON.parse(element.getAttribute("index"));
                 const key_name = producto.nombre.trim();
+                let countProd =0;
+                // Esto no se hace asi pero es una solucion rapida
+                try {countProd = producto.cantidad.trim()} catch (error) {countProd = producto.cantidad} 
                 if (!conteoProducto[key_name]) {conteoProducto[key_name]=0}
-                if (Number(conteoProducto[key_name]) >= Number(producto.cantidad.trim())) {
+                if (Number(conteoProducto[key_name]) >= Number(countProd)) {
                     alert("No hay suficiente stock de este producto")
                 }else{
                     user[keyUser].push(producto)
