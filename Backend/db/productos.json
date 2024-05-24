@@ -1,1 +1,47 @@
-[{"ID":"1","nombre":" BVLGARI Man In Black Eau De Parfum","precio":"139.000","cantidad":"3","categoria":"halloween","genero":"masculino","image":"uploads/image-1715664576355.jpeg"},{"ID":"2","nombre":"Carolina Herrera Good Girl Eau De Parfum","precio":"110.000","cantidad":"3","categoria":"halloween","genero":"femenino","image":"uploads/image-1715664704894.jpeg"},{"ID":"3","nombre":"212 VIP BLACK","precio":"200.000","cantidad":"3","categoria":"navidad","genero":"masculino","image":"uploads/image-1715668596062.jpeg"},{"ID":"4","nombre":"ORIENTICA Velvet Gold 90ml","precio":"139.900","cantidad":"4","categoria":"navidad","genero":"femenino","image":"uploads/image-1716525646604.jpg"},{"ID":"5","nombre":"Lattafa Oud for Glory","precio":"159.900","cantidad":"5","categoria":"navidad","genero":"femenino","image":"uploads/image-1716528424718.jpg"}]
+[
+    {
+        "ID": "1",
+        "nombre": " BVLGARI Man In Black Eau De Parfum",
+        "precio": "139.000",
+        "cantidad": "3",
+        "categoria": "halloween",
+        "genero": "masculino",
+        "image": "uploads/image-1715664576355.jpeg"
+    },
+    {
+        "ID": "2",
+        "nombre": "Carolina Herrera Good Girl Eau De Parfum",
+        "precio": "110.000",
+        "cantidad": "3",
+        "categoria": "halloween",
+        "genero": "femenino",
+        "image": "uploads/image-1715664704894.jpeg"
+    },
+    {
+        "ID": "3",
+        "nombre": "212 VIP BLACK",
+        "precio": "200.000",
+        "cantidad": "3",
+        "categoria": "navidad",
+        "genero": "masculino",
+        "image": "uploads/image-1715668596062.jpeg"
+    },
+    {
+        "ID": "4",
+        "nombre": "ORIENTICA Velvet Gold 90ml",
+        "precio": "139.900",
+        "cantidad": "4",
+        "categoria": "navidad",
+        "genero": "femenino",
+        "image": "uploads/image-1716525646604.jpg"
+    },
+    {
+        "ID": "5",
+        "nombre": "Lattafa Oud for Glory",
+        "precio": "159.900",
+        "cantidad": "5",
+        "categoria": "navidad",
+        "genero": "masculino",
+        "image": "uploads/image-1716528424718.jpg"
+    }
+]

@@ -53,7 +53,6 @@ function Main() {
         document.body.appendChild(htmlDivTable);
         const url = await captura(htmlDivTable);
         htmlDivTable.remove();
-
         const cloneUser = {...user};
         cloneUser[user.data.email] = [];
         manageLocalStorage("edit", "usuario", cloneUser);
