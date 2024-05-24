@@ -71,5 +71,5 @@ export default function itemNew({
 }
 
 function obtenerGeneroAleatorio() {
-    return Math.random() < 0.5 ? 'masculino' : 'femenino';
+    return Math.random() > 0.5 ? 'masculino' : 'femenino';
 }

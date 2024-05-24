@@ -1,4 +1,5 @@
 import manageLocalStorage from "../libs/manageLocalStorage.js";
+
 import getHTML from "../libs/getHTML.js";
 import captura from "../libs/captura.js";
 function Main() {
@@ -52,6 +53,7 @@ function Main() {
         document.body.appendChild(htmlDivTable);
         const url = await captura(htmlDivTable);
         htmlDivTable.remove();
+
         const cloneUser = {...user};
         cloneUser[user.data.email] = [];
         manageLocalStorage("edit", "usuario", cloneUser);

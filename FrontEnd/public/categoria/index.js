@@ -2,7 +2,16 @@ import manageLocalStorage from "../libs/manageLocalStorage.js";
 import carrito from "../components/carrito.js";
 import productElement from "../components/product.js"
 import fetchPost from "../libs/fetchPost.js"
+
+// import message from "../components/message/message.js";
+
 async function categoria(){
+    // await message({
+    //     title: "Bienvenido",
+    //     message: "Bienvenido a nuestra tienda de ropa online, donde encontrarás las últimas tendencias en moda para mujer.",
+    //     btnDone: ["Aceptar", ()=>{}],
+    // })
+
     const logOUT = document.getElementById("ButtonLogOut");
     const description = document.getElementById("description")
     let genero = window.location.hash.slice(1);
